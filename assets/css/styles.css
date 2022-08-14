@@ -163,6 +163,7 @@ img {
 }
 
 .nav_logo,
+.themes_toggle,
 .nav_toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
@@ -172,7 +173,19 @@ img {
   color: var(--first-color);
 }
 
+.themes_toggle{
+  position: absolute;
+  right: 3.3rem;
+  bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.themes_toggle:hover{
+  color: var(--first-color);
+}
+
 .nav_toggle {
+  bottom: 0.8rem;
   font-size: 1.1rem;
   cursor: pointer;
 }
@@ -215,17 +228,6 @@ img {
 
 .nav_icon {
   font-size: 1.2rem;
-}
-
-.themes_toggle{
-  position: absolute;
-  right: 4.3rem;
-  bottom:0.8rem;
-  font-size: 1.2rem;
-}
-
-.themes_toggle:hover{
-  color: var(--first-color);
 }
 
 .nav_close {
