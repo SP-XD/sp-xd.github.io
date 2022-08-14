@@ -217,6 +217,17 @@ img {
   font-size: 1.2rem;
 }
 
+.themes_toggle{
+  position: absolute;
+  right: 4.3rem;
+  bottom:0.8rem;
+  font-size: 1.2rem;
+}
+
+.themes_toggle:hover{
+  color: var(--first-color);
+}
+
 .nav_close {
   position: absolute;
   right: 1.3rem;
