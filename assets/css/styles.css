@@ -220,6 +220,9 @@ img {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: var(--box-background-color);
 }
 
 .nav_link:hover {
