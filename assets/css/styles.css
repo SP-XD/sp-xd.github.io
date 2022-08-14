@@ -4,9 +4,9 @@
   --header-height: 3rem;
 
   /*---------Colors--------*/
-  --hue-color: 27;
-
-  --first-color: hsl(var(--hue-color), 100%, 50%);
+  --hue-color: 82;
+  
+  --first-color: hsl(var(--hue-color), 78%, 55%);
   --first-color-second: hsl(var(--hue-color), 100%, 50%);
   --first-color-alt: hsl(var(--hue-color), 100%, 43%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -14,10 +14,12 @@
   --text-color: hsl(var(--hue-color), 8%, 30%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --body-color: hsl(var(--hue-color), 100%, 97%);
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --box-background-color: hsl(var(--hue-color), 100%, 64%, 0.3);
+  /* --box-background-color: rgb(196, 196, 196, 20%); */
 
   /*-------- Font and typography --------*/
   --body-font: "Poppins", sans-serif;
@@ -269,7 +271,7 @@ img {
 }
 
 .home_blob-img{
-  width: 170px;
+  width: 200px;
 }
 
 .home_data {
@@ -283,16 +285,28 @@ img {
 .home_subtitle{
   font-size: var(--h1-font-size);
   font-weight: var(--font-medium);
-  margin-bottom: var(--mb-0-75)
+  margin-bottom: var(--mb-1)
 }
 
 .home_tagline {
-  margin-bottom: var(--mb-1);
+  color: var(--text-color);
+}
+
+.home_tagline-gray_box{
+  height: 45px;
+  width: 280px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--box-background-color);
 }
 
 .home_description{
-  margin-bottom: var(--mb-2)
+  margin-top: var(--mb-1);
+  margin-bottom: var(--mb-2);
 }
+
 /*---------------- BUTTONS ----------------*/
 
 /*---------------- ABOUT ----------------*/
