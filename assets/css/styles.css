@@ -400,7 +400,6 @@ img {
 .skills_header {
   display: flex;
   align-items:center;
-  margin-bottom: var(--mb-2-5);
   cursor: pointer;
 }
 
@@ -420,6 +419,14 @@ img {
 
 .skills_subtitle{
   font-size: var(--small-font-size);
+}
+
+.skills_data{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .skills_titles{
