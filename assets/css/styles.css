@@ -443,6 +443,17 @@ img {
 .skills_close .skills_list {
   height: 0;
   overflow: hidden;
+  transition: 0.3s;
+}
+
+.skills_open .skills_list {
+  height: max-content;
+  margin-bottom: var(--mb-0-25);
+}
+
+.skills_open .skills_arrow {
+  transform: rotate(-180deg);
+  transition: 0.3s;
 }
 /*---------------- QUALIFICATION ----------------*/
 
