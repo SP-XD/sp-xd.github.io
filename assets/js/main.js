@@ -30,7 +30,7 @@ function linkAction(){
 
 navLink.forEach(n=> n.addEventListener('click', linkAction))
 
-/*---------------- ACCORDION SKILLS ----------------*/
+/*---------------- SKILLS ----------------*/
 const skillsContent = document.getElementsByClassName('skills_content'),
       skillsHeader = document.querySelectorAll('.skills_header')
 
@@ -49,10 +49,27 @@ skillsHeader.forEach((el)=>{
     el.addEventListener('click', toggleSkills)
 })
 
-/*---------------- QUALIFICATION TABS ----------------*/
-
-
 /*---------------- SERVICES MODAL ----------------*/
+const modalViews=document.querySelectorAll('.services_model'),
+      modalButtons=document.querySelectorAll('.services_button'),
+      modalCloses=document.querySelectorAll('.services_model-close')
+
+let modal= function(modalClick){
+    modalViews[modalClick].classList.add('active-model')
+}
+
+modalButtons.forEach((modalButton, i)=>{
+    modalButton.addEventListener('click', ()=>{
+        modal(i)
+    })
+})
+
+modalCloses.forEach((modelClose)=>{
+    modelClose.addEventListener('click', ()=>modalViews.forEach((modalView)=>{
+        modalView.classList.remove('active-model')
+        }
+    ))
+})
 
 
 /*---------------- PORTFOLIO SWIPER  ----------------*/
