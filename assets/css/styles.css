@@ -399,7 +399,7 @@ img {
 
 .skills_header {
   display: flex;
-  align-items:center;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -419,6 +419,10 @@ img {
 
 .skills_subtitle{
   font-size: var(--small-font-size);
+}
+
+.skills_arrow{
+  margin-left: auto;
 }
 
 .skills_data{
