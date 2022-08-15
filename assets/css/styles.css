@@ -433,6 +433,9 @@ img {
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--mb-0-5);
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  background-color: var(--box-background-color);
 }
 
 .skills_name{
