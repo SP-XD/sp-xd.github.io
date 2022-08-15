@@ -13,7 +13,7 @@
   --title-color: hsl(var(--hue-color), 8%, 15%);
   --text-color: hsl(var(--hue-color), 8%, 30%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --input-color: hsl(var(--hue-color), 99%, 90%);
   --body-color: hsl(var(--hue-color), 100%, 97%);
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
@@ -492,7 +492,7 @@ img {
   position: relative;
   background-color: var(--container-color);
   padding: 3.5rem 0.5rem 1.25rem 1.5rem;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
 }
@@ -584,6 +584,54 @@ img {
 /*---------------- TESTIMONIAL ----------------*/
 
 /*---------------- CONTACT ME ----------------*/
+.contact_container{
+  row-gap: 3rem;
+}
+
+.contact_information{
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
+.contact_icon{
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-1);
+}
+
+.contact_title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact_subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact_content{
+  background-color: var(--input-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 1rem ;
+  border-color: var(--first-color);
+  border-width: 2px;
+  border-style: solid ;
+}
+
+.contact_label{
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+.contact_input{
+  width: 100%;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: 0.25 0.5rem 0.5rem 0;
+}
 
 /*---------------- FOOTER ----------------*/
 
