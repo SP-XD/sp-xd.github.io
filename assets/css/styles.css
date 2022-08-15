@@ -432,7 +432,7 @@ img {
 .skills_titles{
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--mb-0-5)
+  margin-bottom: var(--mb-0-5);
 }
 
 .skills_name{
