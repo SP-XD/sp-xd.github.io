@@ -132,6 +132,10 @@ img {
   text-align: center;
 }
 
+.main{
+  padding: 0 1rem;
+}
+
 /*---------------- LAYOUT ----------------*/
 .container {
   max-width: 768px;
