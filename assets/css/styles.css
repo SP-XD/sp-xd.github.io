@@ -609,6 +609,11 @@ img {
   color: var(--text-color-light);
 }
 
+.contact_information:hover .contact_hightlight{
+  color: var(--first-color-alt);
+  transition: 0.3s;
+}
+
 .contact_content{
   background-color: var(--input-color);
   border-radius: 0.5rem;
