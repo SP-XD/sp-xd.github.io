@@ -257,6 +257,14 @@ img {
 }
 
 /* Active link */
+.active-link{
+  color: #fff;
+  background-color: var(--first-color-alt);
+}
+
+.active-link:hover {
+  color: var(--first-color-lighter);
+}
 
 /* Change background header */
 
