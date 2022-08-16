@@ -311,12 +311,12 @@ img {
 }
 
 .home_tagline {
-  color: var(--text-color);
+  font-weight: var(--font-semi-bold);
 }
 
 .home_tagline-gray_box{
   height: 45px;
-  width: 280px;
+  width: 250px;
   border-radius: 10px;
   display: flex;
   align-items: center;
