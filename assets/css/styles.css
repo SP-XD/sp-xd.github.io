@@ -267,6 +267,9 @@ img {
 }
 
 /* Change background header */
+.scroll-header{
+  box-shadow: 0 -1px 4px rgba(0,0 , 0, 0.1);
+}
 
 /*---------------- HOME ----------------*/
 .home_container{
@@ -658,7 +661,7 @@ img {
 }
 
 .footer_container{
-  row-gap: 3.5rem;
+  row-gap: 1.5rem;
 }
 
 .footer_bg{
