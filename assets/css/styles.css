@@ -712,9 +712,30 @@ img {
 }
 
 /*-------- SCROLL UP --------*/
+.scrollup{
+  position: fixed;
+  right: 1.5rem;
+  bottom: -20%;
+  background-color: var(--first-color);
+  opacity: 0.8;
+  padding: 0 .3rem;
+  border-radius: 0.3rem;
+  transition: 0.6s;
+  z-index: var(--z-tooltip);
+}
 
+.scrollup:hover{
+  background-color: var(--first-color-alt);
+}
+.scrollup_icon{
+  font-size: 1.6rem;
+  color: #fff;
+}
 /* Show scroll */
-
+.scroll-show{
+  bottom: 5rem;
+  transition: 0.4s;
+}
 /*-------- SCROLL BAR --------*/
 
 /*---------------- MEDIA QUERIES ----------------*/

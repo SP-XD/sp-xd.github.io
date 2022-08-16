@@ -106,6 +106,11 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader)
 
 /*---------------- SHOW SCROLL UP ----------------*/ 
+function scrollUp(){
+    scrollUpButton=document.getElementById('scroll-up')
+    
+    if(this.scrollY >= 560) scrollUpButton.classList.add('scroll-show'); else scrollUpButton.classList.remove('scroll-show')
+}
 
-
+window.addEventListener('scroll', scrollUp)
 /*---------------- DARK LIGHT THEME ----------------*/ 
