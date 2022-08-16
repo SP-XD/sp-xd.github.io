@@ -14,6 +14,7 @@
   --text-color: hsl(var(--hue-color), 8%, 30%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 99%, 90%);
+  --input-color-alt: hsl(var(--hue-color), 30%, 50%);
   --body-color: hsl(var(--hue-color), 100%, 97%);
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
@@ -621,6 +622,11 @@ img {
   border-color: var(--first-color);
   border-width: 2px;
   border-style: solid ;
+}
+
+.contact_content:hover{
+  border-color: var(--input-color-alt); 
+  transition: 0.3s;
 }
 
 .contact_label{
