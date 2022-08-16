@@ -263,6 +263,7 @@ img {
 /*---------------- HOME ----------------*/
 .home_container{
   gap: 1rem;
+  /* height: 100vh; */
 }
 
 .home_content {
@@ -582,8 +583,6 @@ img {
 
 /*---------------- PROJECT IN MIND ----------------*/
 
-/*---------------- TESTIMONIAL ----------------*/
-
 /*---------------- CONTACT ME ----------------*/
 .contact_container{
   row-gap: 3rem;
@@ -591,7 +590,7 @@ img {
 
 .contact_information{
   display: flex;
-  margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-3);
 }
 
 .contact_icon{
@@ -618,7 +617,7 @@ img {
 .contact_content{
   background-color: var(--input-color);
   border-radius: 0.5rem;
-  padding: 0.75rem 1rem 1rem ;
+  padding: 0.75rem 1rem 0.25em ;
   border-color: var(--first-color);
   border-width: 2px;
   border-style: solid ;
@@ -641,7 +640,7 @@ img {
   font-size: var(--normal-font-size);
   border: none;
   outline: none;
-  padding: 0.25 0.5rem 0.5rem 0;
+  padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
 /*---------------- FOOTER ----------------*/
