@@ -1,7 +1,11 @@
 /*---------------- MENU SHOW Y HIDDEN ----------------*/
 const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle')
+      navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
+
+const themesMenu = document.getElementById('themes-menu'),
+      themesToggle = document.getElementById('themes-toggle'),
+      themesClose = document.getElementById('themes-close')
 
 /*---- MENU SHOW ----*/
 /* Validate if constant exists */
@@ -11,11 +15,23 @@ if(navToggle){
     })
 }
 
+if(themesToggle){
+    themesToggle.addEventListener('click', ()=> {
+        themesMenu.classList.add('show-menu')
+    })
+}
+
 /*---- MENU HIDDEN ----*/
 /* Validate if constant exists */
 if(navClose){
     navClose.addEventListener('click', ()=> {
         navMenu.classList.remove('show-menu')
+    })
+}
+
+if(themesClose){
+    themesClose.addEventListener('click', ()=>{
+        themesMenu.classList.remove('show-menu')
     })
 }
 
@@ -113,4 +129,10 @@ function scrollUp(){
 }
 
 window.addEventListener('scroll', scrollUp)
-/*---------------- DARK LIGHT THEME ----------------*/ 
+
+/*---------------- DARK LIGHT themes ----------------*/ 
+/*---------------- DARK LIGHT THEME ----------------*/ const themeButton = document.querySelector(':root') ;
+function toggle(){
+    let item=document.getElementById(':root')
+    item.style.setProperty('--hue-color', '--red')
+}
