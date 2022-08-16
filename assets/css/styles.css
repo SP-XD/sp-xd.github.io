@@ -2,9 +2,13 @@
 
 :root {
   --header-height: 3rem;
+  /*---------themes list-----*/
+  --red: 10;
+  --green: 84;
+  --blue: 220;
 
   /*---------Colors--------*/
-  --hue-color: 82;
+  --hue-color: var(--green);
   
   --first-color: hsl(var(--hue-color), 78%, 51%);
   --first-color-second: hsl(var(--hue-color), 78%, 51%);
@@ -68,7 +72,17 @@
   }
 }
 
-/*-------- Variables Dark theme --------*/
+/*-------- Variables Dark themes --------*/
+body.dark-theme{
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color), 29%, 16%);
+  --box-background-color: hsl(var(--hue-color), 100%, 64%, 0.3);
+  /* --box-background-color: rgb(196, 196, 196, 20%); */
+}
 
 /*-------- Button Dark/Light --------*/
 
@@ -158,7 +172,8 @@ img {
   background-color: var(--body-color);
 }
 
-/*---------------- NAV ----------------*/
+
+/*---------------- NAV & themes----------------*/
 .nav {
   max-width: 968px;
   height: var(--header-height);
@@ -179,28 +194,23 @@ img {
 }
 
 .themes_toggle{
-  position: absolute;
-  right: 3.3rem;
-  bottom: 0.8rem;
-  font-size: 1.1rem;
-}
-
-.themes_toggle:hover{
-  color: var(--first-color);
-}
-
-.nav_toggle {
-  bottom: 0.8rem;
   font-size: 1.1rem;
   cursor: pointer;
 }
 
-.nav_toggle:hover {
+.nav_toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav_toggle:hover,
+.themes_toggle:hover{
   color: var(--first-color);
 }
 
 @media screen and (max-width: 767px) {
-  .nav_menu {
+  .nav_menu, 
+  .themes_menu {
     position: fixed;
     bottom: -100%;
     left: 0;
@@ -213,21 +223,59 @@ img {
   }
 }
 
-.nav_list {
+.nav_list,
+.themes_list {
   grid-template-columns: repeat(3, 1fr);
   gap: 2 rem;
 }
 
-.nav_link {
+.nav_link,
+.themes_item{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
   padding: 0.3rem;
   border-radius: 0.5rem;
   background-color: var(--box-background-color);
+}
+
+.themes_item{
+  cursor: pointer;
+  height: 3.5rem;
+}
+
+#red-theme{
+  color: #fff;
+  background-color: hsl(var(--red), 78%, 51%);
+}
+
+#red-dark-theme{
+  color: #fff;
+  background-color: hsl(var(--red), 50%, 38%);
+}
+
+#green-theme{
+  color: #fff;
+  background-color: hsl(var(--green), 78%, 51%);
+}
+
+#green-dark-theme{
+  color: #fff;
+  background-color: hsl(var(--green), 50%, 38%);
+}
+
+#blue-theme{
+  color: #fff;
+  background-color: hsl(var(--blue), 78%, 51%);
+}
+
+#blue-dark-theme{
+  color: #fff;
+  background-color: hsl(var(--blue), 50%, 38%);
 }
 
 .nav_link:hover {
@@ -238,17 +286,35 @@ img {
   font-size: 1.2rem;
 }
 
-.nav_close {
+.menu_title{
+  position: absolute;
+  left: 1.6rem;
+  bottom: 1rem;
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+
+.nav_close,
+.themes_close{
   position: absolute;
   right: 1.3rem;
-  bottom: 0.5rem;
+  bottom: 0.6rem;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--first-color);
 }
 
-.nav_close:hover {
+.nav_close:hover,
+.themes_close:hover {
   color: var(--first-color-alt);
+}
+
+/*Nav Buttons*/
+.nav_buttons{
+  display: flex;
+  align-items:center;
+  gap: 1rem;
 }
 
 /* show menu */
@@ -270,7 +336,6 @@ img {
 .scroll-header{
   box-shadow: 0 -1px 4px rgba(0,0 , 0, 0.1);
 }
-
 /*---------------- HOME ----------------*/
 .home_container{
   gap: 1rem;
@@ -407,6 +472,8 @@ img {
   background-color: transparent;
   color: var(--first-color-alt);
 }
+
+
 /*---------------- ABOUT ----------------*/
 .about_img{
   width: 90%;
