@@ -6,8 +6,8 @@
   /*---------Colors--------*/
   --hue-color: 82;
   
-  --first-color: hsl(var(--hue-color), 88%, 45%);
-  --first-color-second: hsl(var(--hue-color), 100%, 50%);
+  --first-color: hsl(var(--hue-color), 78%, 51%);
+  --first-color-second: hsl(var(--hue-color), 78%, 51%);
   --first-color-alt: hsl(var(--hue-color), 100%, 40%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
   --title-color: hsl(var(--hue-color), 8%, 15%);
