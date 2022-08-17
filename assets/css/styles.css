@@ -158,9 +158,9 @@ img {
   text-align: center;
 }
 
-.main{
+/* .main{
   padding: 0 1rem;
-}
+} */
 
 /*---------------- LAYOUT ----------------*/
 .container {
@@ -449,7 +449,7 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
 }
@@ -467,6 +467,7 @@ img {
 .button-flex{
   display: inline-flex;
   align-items: center;
+  gap: 0.3rem
 }
 
 .button-small{
@@ -831,7 +832,74 @@ img {
 }
 /*---------------- MEDIA QUERIES ----------------*/
 /* For small devices */
+@media screen and (max-width: 350px){
+  .container{
+    margin-right: var(--mb-1);
+    margin-left: var(--mb-1);
+  }
 
+  .nav_menu, .themes_menu{
+    padding: 1.5rem 1rem 4rem;
+  }
+
+  .nav_list, .themes_list{
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    text-align: center;
+  }
+
+  .nav_link, .themes_item{
+    padding: 0.2rem 0.1rem;
+  }
+
+  .menu_title{
+    font-size: var(--h3-font-size);
+    left: 1rem;
+  }
+
+  .home_content{
+    grid-template-columns: 0.25fr 3fr;
+  }
+
+  .home_blob{
+    width: 180px;
+  }
+
+  
+  .home_subtitle{
+    font-weight: 400;
+  }
+
+  .home_tagline{
+   font-size: 0.9rem;
+  }
+
+  .home_description{
+    margin-bottom: var(--mb-1);
+  }
+
+  .home_tagline-gray_box{
+    width: 230px;;
+  }
+
+  .skills_title{
+    font-size: var(--normal-font-size);
+  }
+
+  .services_container{
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+
+  .services_content{
+    padding-right: 3.5rem;
+  }
+
+  .services_modal{
+    padding: 0.5rem;
+  }
+  
+}
 /* For medium devices */
 
 /* For large devices */
