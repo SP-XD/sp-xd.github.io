@@ -75,16 +75,25 @@
 /*-------- Variables Dark themes --------*/
 body.dark-theme{
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 95%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --body-color: hsl(var(--hue-color), 18%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --box-background-color: hsl(var(--hue-color), 100%, 64%, 0.3);
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 }
 
 /*-------- Button Dark/Light --------*/
+.dark_light-theme{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.dark_light-theme:hover{
+  color: var(--first-color);
+}
 
 /*---------------- BASE ----------------*/
 * {
@@ -194,12 +203,12 @@ img {
 }
 
 .themes_menu_toggle{
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
 .nav_toggle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 

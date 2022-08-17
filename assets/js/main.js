@@ -131,8 +131,28 @@ function scrollUp(){
 window.addEventListener('scroll', scrollUp)
 
 /*---------------- DARK LIGHT themes ----------------*/ 
-/*---------------- DARK LIGHT THEME ----------------*/ const themeButton = document.querySelector(':root') ;
-function toggle(){
-    let item=document.getElementById(':root')
-    item.style.setProperty('--hue-color', '--red')
+const darkLightThemeButton = document.getElementById('dark_light-theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'uil-sun'
+
+//  localStorage theme is being retrieved if the site was previously visited 
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon=localStorage.getItem('selected-icon')
+
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => darkLightThemeButton.classList.contains(iconTheme) ? 'uil-moon' : "uil-sun"
+
+if(selectedTheme){
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'] (darkTheme)
+    darkLightThemeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+
 }
+
+darkLightThemeButton.addEventListener('click', ()=>{
+    document.body.classList.toggle(darkTheme)
+    darkLightThemeButton.classList.toggle(iconTheme)
+
+    // storing current theme to local storage
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
