@@ -81,6 +81,8 @@ body.dark-theme{
   --body-color: hsl(var(--hue-color), 18%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --box-background-color: hsl(var(--hue-color), 100%, 64%, 0.3);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 }
 
@@ -813,7 +815,20 @@ img {
   transition: 0.4s;
 }
 /*-------- SCROLL BAR --------*/
+::-webkit-scrollbar{
+  width: 0.60rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.5rem;
+}
 
+::-webkit-scrollbar-thumb{
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: var(--text-color-light);
+}
 /*---------------- MEDIA QUERIES ----------------*/
 /* For small devices */
 
