@@ -4,7 +4,7 @@ const navMenu = document.getElementById('nav-menu'),
       navClose = document.getElementById('nav-close')
 
 const themesMenu = document.getElementById('themes-menu'),
-      themesToggle = document.getElementById('themes-toggle'),
+      themesToggle = document.getElementById('themes-menu-toggle'),
       themesClose = document.getElementById('themes-close')
 
 /*---- MENU SHOW ----*/

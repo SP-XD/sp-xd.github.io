@@ -183,7 +183,7 @@ img {
 }
 
 .nav_logo,
-.themes_toggle,
+.themes_menu_toggle,
 .nav_toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
@@ -193,7 +193,7 @@ img {
   color: var(--first-color);
 }
 
-.themes_toggle{
+.themes_menu_toggle{
   font-size: 1.1rem;
   cursor: pointer;
 }
@@ -204,7 +204,7 @@ img {
 }
 
 .nav_toggle:hover,
-.themes_toggle:hover{
+.themes_menu_toggle:hover{
   color: var(--first-color);
 }
 
