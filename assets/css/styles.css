@@ -5,6 +5,7 @@
   /*---------themes list-----*/
   --red: 10;
   --green: 84;
+  --ocean-blue: 200;
   --blue: 220;
 
   /*---------Colors--------*/
@@ -23,7 +24,7 @@
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-  --box-background-color: hsl(var(--hue-color), 100%, 64%, 0.3);
+  --box-background-color: hsl(var(--hue-color), 100%, 80%);
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 
   /*-------- Font and typography --------*/
@@ -76,11 +77,11 @@
 body.dark-theme{
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 100%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 18%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
-  --box-background-color: hsl(var(--hue-color), 100%, 64%, 0.3);
+  --box-background-color: hsl(var(--hue-color), 100%, 64%, 0.1);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
   /* --box-background-color: rgb(196, 196, 196, 20%); */
@@ -284,9 +285,9 @@ img {
   background-color: hsl(var(--blue), 78%, 51%);
 }
 
-#blue-dark-theme{
+#ocean-blue-theme{
   color: #fff;
-  background-color: hsl(var(--blue), 50%, 38%);
+  background-color: hsl(var(--ocean-blue), 78%, 51%);
 }
 
 .nav_link:hover {
@@ -337,10 +338,6 @@ img {
 .active-link{
   color: #fff;
   background-color: var(--first-color-alt);
-}
-
-.active-link:hover {
-  color: var(--first-color-lighter);
 }
 
 /* Change background header */
@@ -830,6 +827,8 @@ img {
 ::-webkit-scrollbar-thumb:hover{
   background-color: var(--text-color-light);
 }
+
+
 /*---------------- MEDIA QUERIES ----------------*/
 /* For small devices */
 @media screen and (max-width: 350px){
