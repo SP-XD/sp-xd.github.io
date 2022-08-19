@@ -5,9 +5,9 @@
   --header-height: 3rem;
   /*---------themes list-----*/
   --red: 5;
-  --green: 84;
-  --ocean-blue: 200;
-  --blue: 220;
+  /* --green: 84; */
+  /* --ocean-blue: 200; */
+  /* --blue: 220; */
 
   /*---------Colors--------*/
   --hue-color: var(--red);
@@ -25,7 +25,7 @@
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-  --box-background-color: hsl(var(--hue-color), 100%, 80%);
+  --box-background-color: hsl(var(--hue-color), 0%, 100%);
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 
   /*---------gradient colors------*/
@@ -97,11 +97,12 @@ body.dark-theme{
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: #12181b;
   --container-color: hsl(var(--hue-color), 29%, 16%);
-  --box-background-color: hsl(var(--hue-color), 100%, 64%, 0.1);
+  --box-background-color: hsl(var(--hue-color), 0%, 99%, 0.1);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 }
+
 
 /*-------- Button Dark/Light --------*/
 .dark_light-theme{
@@ -163,6 +164,7 @@ img {
   font-family: var(--heading-font);
   font-size: var(--h1-font-size);
   color: var(--title-color);
+  margin-bottom: 0.1rem;
 }
 
 .section_subtitle {
