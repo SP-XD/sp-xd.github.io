@@ -32,6 +32,16 @@
   --orange: #fa8142 ;
   --pink: #FF40AB;
 
+  --yellow:  #FCEE21;
+  --green: #009245;
+
+  --blue1: #1BFFFF;
+  --blue2:  #2E3192;
+
+  --gradient1: linear-gradient(90deg, var(--orange), var(--pink) );
+  --gradient2: linear-gradient(90deg, var(--green), var(--yellow));
+  --gradient3: linear-gradient(90deg, var(--blue2), var(--blue1) );
+
   /*-------- Font and typography --------*/
   --heading-font: "Rubik", sans-serif;
   --body-font: "Poppins", sans-serif;
@@ -282,35 +292,21 @@ img {
   height: 3.5rem;
 }
 
-#red-theme{
+#theme1{
   color: #fff;
-  background-color: hsl(var(--red), 78%, 51%);
+  background-image: var(--gradient1);
 }
 
-#red-dark-theme{
+#theme2{
   color: #fff;
-  background-color: hsl(var(--red), 50%, 38%);
+  background-image: var(--gradient2);
 }
 
-#green-theme{
+#theme3{
   color: #fff;
-  background-color: hsl(var(--green), 78%, 51%);
+  background-image: var(--gradient3);
 }
 
-#green-dark-theme{
-  color: #fff;
-  background-color: hsl(var(--green), 50%, 38%);
-}
-
-#blue-theme{
-  color: #fff;
-  background-color: hsl(var(--blue), 78%, 51%);
-}
-
-#ocean-blue-theme{
-  color: #fff;
-  background-color: hsl(var(--ocean-blue), 78%, 51%);
-}
 
 .nav_link:hover {
   color: var(--first-color);
@@ -467,8 +463,8 @@ img {
 
 .button{
   display: inline-block;
-  background-color: #fff;
-  color: var(--first-color);
+  background-image: var(--gradient1);
+  color: #fff;
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
@@ -477,7 +473,6 @@ img {
 .button:hover{
   transition: 0.3s;
   color: #FFF;
-  background-image: linear-gradient(90deg,var(--orange),var(--pink));
 }
 
 .button_icon{
@@ -766,7 +761,7 @@ img {
 }
 
 .footer_bg{
-  background-color: var(--first-color-second);
+  background-image: var(--gradient1);
   padding: 2rem 0 3rem;
 }
 
