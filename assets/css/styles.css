@@ -394,12 +394,12 @@ img {
 }
 
 .home_blob{
-  width: 200px;
-  fill: var(--first-color);
+  width: 230px;
+  fill: #fff;
 }
 
 .home_blob-img{
-  width: 200px;
+  width: 300px;
 }
 
 .home_data {
