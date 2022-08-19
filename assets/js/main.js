@@ -156,3 +156,6 @@ darkLightThemeButton.addEventListener('click', ()=>{
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*------------------- Color Themes --------------------- */
+// const colorThemesButton = document.querySelectorAll('')

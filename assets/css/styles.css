@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap");
 
 :root {
   --header-height: 3rem;
   /*---------themes list-----*/
-  --red: 10;
+  --red: 5;
   --green: 84;
   --ocean-blue: 200;
   --blue: 220;
 
   /*---------Colors--------*/
-  --hue-color: var(--green);
+  --hue-color: var(--red);
   
   --first-color: hsl(var(--hue-color), 78%, 51%);
   --first-color-second: hsl(var(--hue-color), 78%, 51%);
@@ -20,18 +21,23 @@
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 99%, 90%);
   --input-color-alt: hsl(var(--hue-color), 30%, 50%);
-  --body-color: hsl(var(--hue-color), 100%, 97%);
+  --body-color: #dbe1e8;
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   --box-background-color: hsl(var(--hue-color), 100%, 80%);
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 
+  /*---------gradient colors------*/
+  --orange: #fa8142 ;
+  --pink: #FF40AB;
+
   /*-------- Font and typography --------*/
+  --heading-font: "Rubik", sans-serif;
   --body-font: "Poppins", sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-  --big-font-size: 2.1rem;
+  --big-font-size: 3rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
@@ -79,7 +85,7 @@ body.dark-theme{
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 100%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 18%, 12%);
+  --body-color: #12181b;
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --box-background-color: hsl(var(--hue-color), 100%, 64%, 0.1);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
@@ -144,6 +150,7 @@ img {
 }
 
 .section_title {
+  font-family: var(--heading-font);
   font-size: var(--h1-font-size);
   color: var(--title-color);
 }
@@ -162,6 +169,21 @@ img {
 /* .main{
   padding: 0 1rem;
 } */
+
+.gradient-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(90deg,var(--orange),var(--pink));
+  color: transparent;
+}
+
+.hi-gradient {
+    background-image: linear-gradient(90deg,var(--orange),var(--pink));
+    border-radius: 3px;
+    color: var(--h-color);
+    padding: 0 4px;
+}
 
 /*---------------- LAYOUT ----------------*/
 .container {
@@ -385,6 +407,7 @@ img {
 }
 
 .home_title{
+  font-family: var(--heading-font);
   font-size: var(--big-font-size);
 }
 
@@ -444,15 +467,17 @@ img {
 
 .button{
   display: inline-block;
-  background-color: var(--first-color);
-  color: #fff;
+  background-color: #fff;
+  color: var(--first-color);
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
 }
 
 .button:hover{
-  background-color: var(--first-color-alt);
+  transition: 0.3s;
+  color: #FFF;
+  background-image: linear-gradient(90deg,var(--orange),var(--pink));
 }
 
 .button_icon{
@@ -854,6 +879,10 @@ img {
   .menu_title{
     font-size: var(--h3-font-size);
     left: 1rem;
+  }
+
+  .home_content{
+    padding-top: 1rem;
   }
 
   .home_content{
