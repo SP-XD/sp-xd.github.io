@@ -88,8 +88,6 @@ modalCloses.forEach((modelClose)=>{
 })
 
 
-/*---------------- PORTFOLIO SWIPER  ----------------*/
-
 /*---------------- SCROLL SECTIONS ACTIVE LINK ----------------*/
 const sections=document.querySelectorAll('section[id]')
 
@@ -159,3 +157,4 @@ darkLightThemeButton.addEventListener('click', ()=>{
 
 /*------------------- Color Themes --------------------- */
 // const colorThemesButton = document.querySelectorAll('')
+
