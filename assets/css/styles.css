@@ -48,7 +48,7 @@
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 3rem;
-  --h1-font-size: 1.5rem;
+  --h1-font-size: 1.85rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: 0.938rem;
@@ -80,7 +80,7 @@
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3rem;
-    --h1-font-size: 2.25rem;
+    --h1-font-size: 2rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
@@ -1074,4 +1074,22 @@ img {
 
 /* For large devices */
 
+@media screen and (min-width: 1024px){
+  .header,
+  .main,
+  .footer_container{
+    padding: 0;
+  }
 
+  .home_blob{
+    width: 320px;
+  }
+  
+  .home_social{
+    transform: translateX(-4rem);
+  }
+
+  .services_container{
+    grid-template-columns: repeat(3, 238px);
+  }
+}
