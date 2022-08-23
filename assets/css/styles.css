@@ -26,6 +26,8 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   --box-background-color: hsl(var(--hue-color), 0%, 100%);
+  --card-shadow: 0 4px 8px rgba(0,30,84,.12);
+  --card-bg: #fff;
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 
   /*---------gradient colors------*/
@@ -195,6 +197,18 @@ img {
     border-radius: 3px;
     color: var(--h-color);
     padding: 0 4px;
+}
+
+.card{
+  background-color: var(--card-bg);
+  padding: 0;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.card-content{
+  padding: 1rem;
 }
 
 /*---------------- LAYOUT ----------------*/
