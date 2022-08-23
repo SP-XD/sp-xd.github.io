@@ -1,3 +1,5 @@
+import projectsData from './assets/json/projects.json' assert {type: 'json'}
+
 /*---------------- MENU SHOW Y HIDDEN ----------------*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
@@ -87,6 +89,32 @@ modalCloses.forEach((modelClose)=>{
     ))
 })
 
+/*-------------------------PROJECTS-------------------- */
+console.log(projectsData)
+document.getElementById("projects_container").innerHTML = `
+  <!-----------Project Card--------------->
+   ${projectsData.map(function(project){
+    return `
+    <div class="projects_item card" >
+
+      <img class="project_image" src="${project.image}"/>
+
+      <div class="projects_data card-content">
+        <h3 class="project_title">${project.title}</h3>
+
+        <p class="project_description">
+            ${project.description}
+        </p>
+
+        <a href="${project.sourceLink}" class="button button-flex button-small project_button">Checkout</a>
+
+      </div>
+    </div> 
+    ` 
+   }).join('')} 
+`
+
+/*-------------------- PORTFOLIO SWIPER  ----------------*/
 
 /*---------------- SCROLL SECTIONS ACTIVE LINK ----------------*/
 const sections=document.querySelectorAll('section[id]')
