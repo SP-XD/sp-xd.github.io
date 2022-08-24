@@ -102,6 +102,8 @@ body.dark-theme{
   --box-background-color: hsl(var(--hue-color), 0%, 99%, 0.1);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --card-shadow: 0 4px 8px rgba(0,0,0,.38);
+  --card-bg: #22262f;
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 }
 
@@ -205,8 +207,12 @@ img {
   border-radius: 0.5rem;
   box-shadow: var(--card-shadow);
   overflow: hidden;
+  transition: 0.3s;
 }
 
+.card:hover{
+  transform: translateY(-0.25rem);
+}
 .card-content{
   padding: 1rem;
 }
