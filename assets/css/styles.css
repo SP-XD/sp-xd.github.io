@@ -213,9 +213,6 @@ img {
 .card:hover{
   transform: translateY(-0.25rem);
 }
-.card-content{
-  padding: 1rem;
-}
 
 /*---------------- LAYOUT ----------------*/
 .container {
@@ -526,6 +523,7 @@ img {
 
 
 /*---------------- ABOUT ----------------*/
+
 .about_img{
   width: 90%;
   border-radius: 0.5rem;
@@ -961,7 +959,7 @@ img {
   }
 
   .home_blob{
-    width: 180px;
+    width: 200px;
   }
 
   
