@@ -91,15 +91,15 @@ modalCloses.forEach((modelClose)=>{
 
 /*-------------------------PROJECTS-------------------- */
 console.log(projectsData)
-document.getElementById("projects_container").innerHTML = `
-  <!-----------Project Card--------------->
+document.getElementById("project-cards").innerHTML = `
    ${projectsData.map(function(project){
     return `
-    <div class="projects_item card" >
+    <!-----------Project Card--------------->
+     <div class="project_card card swiper-slide" >
 
       <img class="project_image" src="${project.image}"/>
 
-      <div class="projects_data card-content">
+      <div class="project_data">
         <h3 class="project_title">${project.title}</h3>
 
         <p class="project_description">
@@ -116,11 +116,12 @@ document.getElementById("projects_container").innerHTML = `
 
 /*-------------------- PROJECTS SWIPER  ----------------*/
 var swiper = new Swiper(".projects_content", {
-        slidesPerView: 5,
+        slidesPerView: 2,
         spaceBetween: 30,
         slidesPerGroup: 1,
         loop: true,
         centerSlide: true,
+        loop: true,
         fade: true,
         grabCursor: true,
         pagination: {
@@ -140,7 +141,7 @@ var swiper = new Swiper(".projects_content", {
                 slidesPerView: 2,
             },
             1024: {
-                slidesPerView: 5,
+                slidesPerView: 4,
             }  
         },
       });
