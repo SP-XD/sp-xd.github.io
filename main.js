@@ -132,6 +132,17 @@ var swiper = new Swiper(".projects_content", {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            568: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 5,
+            }  
+        },
       });
 /*---------------- SCROLL SECTIONS ACTIVE LINK ----------------*/
 const sections=document.querySelectorAll('section[id]')
