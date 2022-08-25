@@ -618,8 +618,8 @@ img {
 .projects_container{
   position: relative;
   /* background-color: gray; */
-  height: 460px;
-  padding: 12px 20px;
+  height: 480px;
+  padding: 15px 20px;
   /* overflow: visible; */
 }
 
@@ -651,10 +651,21 @@ img {
   object-fit: cover;
 }
 
-.project_button{
-  justify-content: center;
+.project_description{
+ height: 45px;
 }
 
+.project_button{
+  justify-content: center;
+  border-radius: 0.35rem;
+}
+
+.swiper-pagination-bullet-active { 
+  background-color: var(--first-color) !important; 
+}
+.swiper-pagination-bullet{
+  background-color: var(--first-color-alt) !important;
+}
 /*---------------- SERVICES ----------------*/
 .services_container{
   gap: 1.5rem;
@@ -1038,7 +1049,6 @@ img {
   }
   
   .header,
-  .main,
   .footer_container{
     padding: 0 1rem;
   }
