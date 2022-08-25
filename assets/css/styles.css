@@ -4,7 +4,7 @@
 :root {
   --header-height: 3rem;
   /*---------themes list-----*/
-  --red: 5;
+  --red: 15;
   /* --green: 84; */
   /* --ocean-blue: 200; */
   /* --blue: 220; */
@@ -12,7 +12,7 @@
   /*---------Colors--------*/
   --hue-color: var(--red);
   
-  --first-color: hsl(var(--hue-color), 78%, 51%);
+  --first-color: hsl(var(--hue-color), 99%, 51%);
   --first-color-second: hsl(var(--hue-color), 78%, 51%);
   --first-color-alt: hsl(var(--hue-color), 100%, 40%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
