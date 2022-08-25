@@ -17,5 +17,11 @@
         "image" : "https://picsum.photos/450/250",
         "description": "My personal portfolio built using html, css and javascript.",
         "sourceLink": "https:github.com/sp-xd/portfolio"
+    },
+    {
+        "title": "Placeholder",
+        "image" : "https://picsum.photos/450/250",
+        "description": "My personal portfolio built using html, css and javascript.",
+        "sourceLink": "https:github.com/sp-xd/portfolio"
     }
 ] 
