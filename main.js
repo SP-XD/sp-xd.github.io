@@ -106,7 +106,7 @@ document.getElementById("project-cards").innerHTML = `
             ${project.description}
         </p>
 
-        <a href="${project.sourceLink}" class="button button-flex button-small project_button">Checkout</a>
+        <a href="${project.sourceLink}" target="_blank" class="button button-flex button-small project_button">Checkout</a>
 
       </div>
     </div> 
@@ -133,6 +133,10 @@ var swiper = new Swiper(".projects_content", {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        autoplay:{
+            delay: 2000,
+            disableOnInteraction: false,
+        },
         breakpoints: {
             0: {
                 slidesPerView: 1,
@@ -141,7 +145,10 @@ var swiper = new Swiper(".projects_content", {
                 slidesPerView: 2,
             },
             1024: {
-                slidesPerView: 4,
+                slidesPerView: 3,
+            },
+            1366: {
+                slidesPerView: 4
             }  
         },
       });
