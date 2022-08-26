@@ -925,7 +925,11 @@ img {
 
 /*---------------- MEDIA QUERIES ----------------*/
 /* For small devices */
-@media screen and (max-width: 350px){
+@media screen and (max-width: 390px){
+  :root{
+  --big-font-size: 2.8rem;
+  }
+
   .container{
     margin-right: var(--mb-1);
     margin-left: var(--mb-1);
@@ -961,7 +965,6 @@ img {
   .home_blob{
     width: 200px;
   }
-
   
   .home_subtitle{
     font-weight: 400;
@@ -1023,6 +1026,9 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  :root{
+    --big-font-size: 2.9rem;
+  }
   .container{
     margin-left: auto;
     margin-right: auto;
@@ -1047,6 +1053,7 @@ img {
   }
   
   .header,
+  .container,
   .footer_container{
     padding: 0 1rem;
   }
@@ -1066,7 +1073,7 @@ img {
 
   .nav_list{
     display: flex;
-    column-gap: 1rem;
+    column-gap: 0.5rem;
   }
 
   .nav_link{
@@ -1080,11 +1087,12 @@ img {
   
   .home_container{
     row-gap: 5rem;
+
   }
 
   .home_content{
     padding-top: 5.5rem;
-    column-gap: 2rem;
+    column-gap: 1.5rem;
   }
 
   .home_blob{
@@ -1110,7 +1118,9 @@ img {
   .about_description{
     text-align: left;
   }
-
+  .about_buttons{
+    justify-content: left;
+  }
   .services_container{
     grid-template-columns: repeat(3, 200px);
     justify-content: center;
