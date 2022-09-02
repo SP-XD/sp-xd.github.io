@@ -374,7 +374,7 @@ img {
 /* Active link */
 .active-link{
   color: #fff;
-  background-color: var(--first-color-alt);
+  background-image: var(--gradient1);
 }
 
 /* Change background header */
@@ -1087,6 +1087,7 @@ img {
 
    .active-link{
     color: var(--first-color);
+    background-image: none;
   }
   
   .home_container{
