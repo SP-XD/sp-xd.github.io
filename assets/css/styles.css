@@ -624,7 +624,7 @@ img {
 .projects_content{
   border-radius: 0.5rem;
   margin: 0 40px;
-  height: 400px;
+  height: 420px;
   /* background-color: rgb(85, 235, 85); */
   /* overflow: hidden; */
 }
@@ -654,9 +654,14 @@ img {
 }
 
 .project_button{
+  position: absolute;
+  width: 87%;
+  bottom: 20px;
   justify-content: center;
   border-radius: 0.35rem;
 }
+
+
 
 .swiper-pagination-bullet-active { 
   background-color: var(--first-color) !important; 

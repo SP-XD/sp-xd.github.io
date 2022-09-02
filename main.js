@@ -151,7 +151,7 @@ var swiper = new Swiper(".projects_content", {
       slidesPerView: 3,
     },
     1366: {
-      slidesPerView: 4,
+      slidesPerView: 5,
     },
   },
 });
