@@ -1178,3 +1178,7 @@ img {
     grid-template-columns: repeat(3, 238px);
   }
 }
+
+html.sr .load-hidden {
+    visibility: hidden;
+}

@@ -1,4 +1,13 @@
-import projectsData from './assets/json/projects.json' assert {type: 'json'}
+import projectsData from "./assets/json/projects.json" assert { type: "json" };
+
+const reveal = {
+  distance: "30px",
+  easing: "ease-in",
+  duration: 500,
+  delay: 300,
+  origin: 'top',
+};
+ScrollReveal().reveal(".main", reveal);
 
 /*---------------- MENU SHOW Y HIDDEN ----------------*/
 const navMenu = document.getElementById("nav-menu"),
