@@ -654,9 +654,8 @@ img {
 }
 
 .project_button{
-  position: absolute;
-  width: 87%;
-  bottom: 20px;
+  position: relative;
+  bottom: -10px;
   justify-content: center;
   border-radius: 0.35rem;
 }
