@@ -1063,7 +1063,7 @@ img {
   }
 
   .nav{
-    /* height: calc(var(--header-height)+ 1.5rem); */
+    height: calc(var(--header-height) + 1rem);
     column-gap: 1rem;
   }
 
