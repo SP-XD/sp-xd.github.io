@@ -161,7 +161,7 @@ img {
 
 /*---------------- REUSABLE CSS CLASSES ----------------*/
 .section {
-  padding: 2rem 0 4rem;
+  padding: 8vh 0 4vh;
 }
 
 .section_title {
@@ -389,7 +389,7 @@ img {
 
 .home_content {
   grid-template-columns: .5fr 3fr;
-  padding-top: 3.5rem; 
+  /* padding-top: 3.5rem;  */
   align-items: center;
 }
 
@@ -1044,7 +1044,7 @@ img {
 
 
   .section{
-    padding: 6rem 0 2rem;
+    padding: 16vh 0 4vh;
   }
 
   .section_subtitle{
