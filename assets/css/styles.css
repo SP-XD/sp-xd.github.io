@@ -668,6 +668,29 @@ img {
 .swiper-pagination-bullet{
   background-color: var(--first-color-alt) !important;
 }
+
+/*---------------- Blogs ----------------*/
+/* .blogs_container{
+  padding: 0 1rem 0;
+} */
+
+.blog_item{
+  position: relative;
+  padding: var(--mb-1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* height: 250px; */
+}
+
+.read_more_button{
+  position: absolute;
+  left: 40%;
+  bottom: 15px;
+  border-radius: 0.35rem;
+}
+
+
 /*---------------- SERVICES ----------------*/
 .services_container{
   gap: 1.5rem;
@@ -1026,6 +1049,8 @@ img {
   .footer_container{
     grid-template-columns: repeat(2, 1fr);
   }
+
+  
   
 }
 
@@ -1111,7 +1136,11 @@ img {
   .home_scroll-button{
     margin-left: 3rem;
   }
-  
+
+  .blogs_container{
+    padding: 0 4rem 0;
+  }
+
   .about_container{
     column-gap: 5rem;
   }

@@ -199,22 +199,30 @@ gql(GET_USER_ARTICLES, { page: 0 })
     .then(result => {
         const articles = result.data.user.publication.posts;
         let container = document.createElement('div');
+        container.classList.add('grid');
 
         articles.forEach(article => {
-            let title = document.createElement('h2');
+            let blog_item = document.createElement('div');
+            blog_item.classList.add('blog_item', 'card');
+
+            let title = document.createElement('h3');
+            title.classList.add('blog_title');
             title.innerText = article.title;
 
             let brief = document.createElement('p');
+            brief.classList.add('blog_brief');
             brief.innerText = article.brief;
 
             let link = document.createElement('a');
-            link.innerText = 'Read more...';
+            // link.classList.add('read_more_button', 'button', 'button-flex');
+            link.innerText = 'Read more';
             link.target = '_blank';
             link.href = `https://sp-xd.hashnode.dev/${article.slug}`;
 
-            container.appendChild(title);
-            container.appendChild(brief);
-            container.appendChild(link);
+            blog_item.appendChild(title);
+            blog_item.appendChild(brief);
+            blog_item.appendChild(link);
+            container.appendChild(blog_item);
         })
 
         document.querySelector('.blogs_container').appendChild(container);
