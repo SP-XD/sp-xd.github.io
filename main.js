@@ -196,6 +196,8 @@ const GET_USER_ARTICLES = `
                     title
                     brief
                     slug
+                    coverImage
+                    dateAdded
                     contentMarkdown
                 }
             }
@@ -207,26 +209,60 @@ gql(GET_USER_ARTICLES, { page: 0 })
     .then(result => {
         const articles = result.data.user.publication.posts;
         let container = document.createElement('div');
-        container.classList.add('grid');
+        container.classList.add('blog_items','grid');
 
         articles.forEach(article => {
             let blog_item = document.createElement('div');
             blog_item.classList.add('blog_item', 'card');
 
+            let blog_content =document.createElement('div');
+            blog_content.classList.add('blog_content');
+
+            let article_link = `https://somnathpaul.hashnode.dev/${article.slug}`;
+
             let title = document.createElement('h3');
             title.classList.add('blog_title');
-            title.innerText = article.title;
+            let title_link = document.createElement('a');
+            title_link.target='_blank';
+            title_link.href=article_link;
+            title_link.innerText = article.title;
+            title.appendChild(title_link);
+
 
             let brief = document.createElement('p');
             brief.classList.add('blog_brief');
             brief.innerText = article.brief;
 
+            let read_more_link = document.createElement('a');
+            read_more_link.target = '_blank';
+            read_more_link.href = article_link; 
+            read_more_link.classList.add('read_more_button');//, 'button', 'button-flex');
+            read_more_link.innerHTML = `Read more <i class="uil uil-external-link-alt"></i>`;
+
+            let date = new Date(Date.parse(article.dateAdded));
+            let options = { day: 'numeric', month: 'long', year: 'numeric'};
+            let date_added=document.createElement('span');
+            date_added.innerHTML=`<i class="uil uil-calender"></i> ${date.toLocaleString('en-US', options)} `;
+            
             let reading_time= document.createElement('span');
             reading_time.innerHTML = `&nbsp <i class="uil uil-book-open"></i> ${readingTime(article.contentMarkdown)} min read`;
 
-            blog_item.appendChild(title);
-            blog_item.appendChild(brief);
-            blog_item.appendChild(link);
+
+            let meta_data=document.createElement('span');
+            meta_data.appendChild(date_added);
+            meta_data.appendChild(reading_time);
+
+            let coverImage = document.createElement('img');
+            coverImage.src=article.coverImage;
+            coverImage.classList.add('blog_img');
+
+            brief.appendChild(read_more_link);
+            blog_item.appendChild(coverImage);
+            blog_content.appendChild(title);
+            // blog_item.appendChild(link);
+            blog_content.appendChild(meta_data);
+            blog_content.appendChild(brief);
+            blog_item.appendChild(blog_content);
             container.appendChild(blog_item);
         })
 
