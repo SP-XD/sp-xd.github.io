@@ -15,13 +15,13 @@
     {
         "title": "Portfolio",
         "image" : "assets/img/projects/portfolio.jpg",
-        "description": "My personal portfolio built using html, css and javascript.",
+        "description": "My personal portfolio built using html, css & javascript.",
         "sourceLink": "https:github.com/sp-xd/portfolio"
     },
     {
         "title": "Custom Roms & kernels",
         "image" : "assets/img/projects/custom_rom.jpg",
-        "description": "Collection of Custom roms and Kernels I have maintained",
+        "description": "Collection of Custom roms & Kernels I have maintained",
         "sourceLink": "https://forum.xda-developers.com/m/sp-xd.8915320/#recent-content"
     },
     {
