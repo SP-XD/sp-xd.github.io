@@ -681,6 +681,10 @@ img {
   padding: 0 1rem 0;
 } */
 
+.blog_item{
+  margin-bottom: 1.5rem;
+}
+
 .blog_img{
   width: 100%;
   /* border-radius: 0.35rem; */
@@ -1071,12 +1075,10 @@ img {
     justify-self: center;
   }
   
-  /*Todo: fill row gap */
   .blog_items{
-    grid-template-columns: repeat(2, 1fr);
-    align-items: flex-start;
+    column-count: 2;
   }
-
+  
   .about_container,
   .contact_container,
   .footer_container{

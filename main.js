@@ -209,7 +209,7 @@ gql(GET_USER_ARTICLES, { page: 0 })
     .then(result => {
         const articles = result.data.user.publication.posts;
         let container = document.createElement('div');
-        container.classList.add('blog_items','grid');
+        container.classList.add('blog_items');
 
         articles.forEach(article => {
             let blog_item = document.createElement('div');
