@@ -165,6 +165,13 @@ var swiper = new Swiper(".projects_content", {
   },
 });
 /*-------------------------- BLOGS ----------------------------*/
+function readingTime(text) {
+  const wpm = 225;
+  const words = text.trim().split(/\s+/).length;
+  const time = Math.ceil(words / wpm);
+  return time;
+}
+
 // Fetch function
 async function gql(query, variables={}) {
     const data = await fetch('https://api.hashnode.com/', {
@@ -189,6 +196,7 @@ const GET_USER_ARTICLES = `
                     title
                     brief
                     slug
+                    contentMarkdown
                 }
             }
         }
@@ -213,11 +221,8 @@ gql(GET_USER_ARTICLES, { page: 0 })
             brief.classList.add('blog_brief');
             brief.innerText = article.brief;
 
-            let link = document.createElement('a');
-            // link.classList.add('read_more_button', 'button', 'button-flex');
-            link.innerText = 'Read more';
-            link.target = '_blank';
-            link.href = `https://sp-xd.hashnode.dev/${article.slug}`;
+            let reading_time= document.createElement('span');
+            reading_time.innerHTML = `&nbsp <i class="uil uil-book-open"></i> ${readingTime(article.contentMarkdown)} min read`;
 
             blog_item.appendChild(title);
             blog_item.appendChild(brief);
