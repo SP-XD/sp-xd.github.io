@@ -629,6 +629,11 @@ img {
   /* overflow: hidden; */
 }
 
+.project_title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+}
 .project_card{
   position: relative;
   display: flex;
