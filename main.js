@@ -117,7 +117,7 @@ document.getElementById("project-cards").innerHTML = `
             ${project.description}
         </p>
 
-        <a href="${project.sourceLink}" target="_blank" class="button button-flex button-small project_button">Checkout</a>
+        <a href="${project.sourceLink}" target="_blank" class="button button-flex button-small project_button">Checkout<i class="uil uil-external-link-alt button_icon checkout_button_icon"></i></a>
 
       </div>
     </div> 

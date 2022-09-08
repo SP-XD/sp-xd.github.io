@@ -655,12 +655,14 @@ img {
 
 .project_button{
   position: relative;
-  bottom: -10px;
+  bottom: -5px;
   justify-content: center;
   border-radius: 0.35rem;
 }
 
-
+.checkout_button_icon{
+  transform:translateY(-1px);
+}
 
 .swiper-pagination-bullet-active { 
   background-color: var(--first-color) !important; 
