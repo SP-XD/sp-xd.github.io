@@ -17,7 +17,7 @@
   --first-color-alt: hsl(var(--hue-color), 100%, 40%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
   --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 30%);
+  --text-color: hsl(var(--hue-color), 8%, 3%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 99%, 90%);
   --input-color-alt: hsl(var(--hue-color), 30%, 50%);
@@ -676,19 +676,39 @@ img {
   padding: 0 1rem 0;
 } */
 
-.blog_item{
+.blog_img{
+  width: 100%;
+  /* border-radius: 0.35rem; */
+}
+
+.blog_content{
   position: relative;
   padding: var(--mb-1);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+  overflow: hidden;
   /* height: 250px; */
 }
 
+.blog_content > h3 > a{
+  color: var(--text-color);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+}
+
+.blog_brief{
+  text-align: left;
+}
+
 .read_more_button{
-  position: absolute;
-  left: 40%;
-  bottom: 15px;
+  color: var(--first-color);
+  /* position: absolute; */
+  /* left: 40%; */
+  /* bottom: 15px;  */
+  /* top: 45%; */
+  /* right: 10%; */
   border-radius: 0.35rem;
 }
 
