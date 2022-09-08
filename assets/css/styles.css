@@ -1070,6 +1070,12 @@ img {
     order: 1;
     justify-self: center;
   }
+  
+  /*Todo: fill row gap */
+  .blog_items{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+  }
 
   .about_container,
   .contact_container,
@@ -1164,9 +1170,6 @@ img {
     margin-left: 3rem;
   }
 
-  .blogs_container{
-    padding: 0 4rem 0;
-  }
 
   .about_container{
     column-gap: 5rem;
