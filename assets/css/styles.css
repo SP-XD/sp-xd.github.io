@@ -823,7 +823,7 @@ img {
 /*---------------- PROJECT IN MIND ----------------*/
 
 /*---------------- CONTACT ME ----------------*/
-.contact_container{
+/* .contact_container{
   row-gap: 3rem;
 }
 
@@ -880,6 +880,25 @@ img {
   border: none;
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
+} */
+
+.contact_container{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact_buttons{
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  padding: 1.3rem;
+}
+.contact{
+  margin-bottom: 2vh;
+}
+.contact_buttons-icon{
+  color: var(--first-color);
+  margin-right: var(--mb-0-5);
 }
 
 /*---------------- FOOTER ----------------*/
