@@ -823,65 +823,6 @@ img {
 /*---------------- PROJECT IN MIND ----------------*/
 
 /*---------------- CONTACT ME ----------------*/
-/* .contact_container{
-  row-gap: 3rem;
-}
-
-.contact_information{
-  display: flex;
-  margin-bottom: var(--mb-3);
-}
-
-.contact_icon{
-  font-size: 2rem;
-  color: var(--first-color);
-  margin-right: var(--mb-1);
-}
-
-.contact_title{
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-}
-
-.contact_subtitle{
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
-}
-
-.contact_information:hover .contact_hightlight{
-  color: var(--first-color-alt);
-  transition: 0.3s;
-}
-
-.contact_content{
-  background-color: var(--input-color);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem 0.25em ;
-  border-color: var(--first-color);
-  border-width: 2px;
-  border-style: solid ;
-}
-
-.contact_content:hover{
-  border-color: var(--input-color-alt); 
-  transition: 0.3s;
-}
-
-.contact_label{
-  font-size: var(--small-font-size);
-  color: var(--title-color);
-}
-.contact_input{
-  width: 100%;
-  background-color: transparent;
-  color: var(--text-color);
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  border: none;
-  outline: none;
-  padding: 0.25rem 0.5rem 0.5rem 0;
-} */
-
 .contact_container{
   display: flex;
   gap: 1rem;
