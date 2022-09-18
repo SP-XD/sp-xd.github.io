@@ -347,4 +347,32 @@ darkLightThemeButton.addEventListener("click", () => {
 });
 
 /*------------------- Color Themes --------------------- */
-// const colorThemesButton = document.querySelectorAll('')
+const gradientThemesButtons = document.querySelectorAll(".theme_item");
+
+const selectedGradientTheme= localStorage.getItem("selectedGradientTheme");
+
+if(selectedGradientTheme){
+  document.body.classList.add(selectedGradientTheme);
+}
+
+function toggleColorTheme(element, idNumber) {
+  let itemClass = element.className;
+  let itemId = element.id;
+  
+  for (let i = 0; i < gradientThemesButtons.length; i++) {
+    gradientThemesButtons[i].classList.remove("theme-selected");
+    document.body.classList.remove("gradient-theme-"+(i+1));
+  }
+  if (itemClass === "theme_item") {
+    document.body.classList.add(itemId);
+    element.classList.add("theme-selected");
+  }
+
+  localStorage.setItem('selectedGradientTheme', itemId);
+}
+
+gradientThemesButtons.forEach((el, id) => {
+  el.addEventListener("click", ()=>{
+    toggleColorTheme(el, id);
+  });
+});

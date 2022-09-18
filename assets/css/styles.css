@@ -3,15 +3,41 @@
 
 :root {
   --header-height: 3rem;
-  /*---------themes list-----*/
-  --red: 15;
-  /* --green: 84; */
-  /* --ocean-blue: 200; */
-  /* --blue: 220; */
 
-  /*---------Colors--------*/
-  --hue-color: var(--red);
+  /*--------- Flat Color list-----*/
+  /* Hsl color */
+  --red-0: 15;
+  --green-0: 110;
+  --ocean-blue-0: 200;
+  --blue-0: 220;
+
+  /* Hex color */
+  --orange-1: #fa8142 ;
+  --pink-1: #FF40AB;
+
+  --yellow-2:  #FCEE21;
+  --green-1: #009245;
+
+  --blue-1: #1BFFFF;
+  --blue-2:  #2E3192;
+
+  /* flat color theme list */
+  --color-1:var(--red-0);
+  --color-2:var(--green-0);
+  --color-3:var(--blue-0);
+
+  /*---------Gradient theme list------*/
+  --gradient-1: linear-gradient(90deg, var(--orange-1), var(--pink-1) );
+  --gradient-2: linear-gradient(90deg, var(--green-1), var(--yellow-2));
+  --gradient-3: linear-gradient(90deg, var(--blue-2), var(--blue-1) );
+
+  /* -----Default Gradient theme---- */
+  --gradient-theme: var(--gradient-1);
+
+  /*---------Default flat Color--------*/
+  --hue-color: var(--color-2);
   
+  /*--------- Light Color theme ---------*/
   --first-color: hsl(var(--hue-color), 99%, 51%);
   --first-color-second: hsl(var(--hue-color), 78%, 51%);
   --first-color-alt: hsl(var(--hue-color), 100%, 40%);
@@ -29,20 +55,6 @@
   --card-shadow: 0 4px 8px rgba(0,30,84,.12);
   --card-bg: #fff;
   /* --box-background-color: rgb(196, 196, 196, 20%); */
-
-  /*---------gradient colors------*/
-  --orange: #fa8142 ;
-  --pink: #FF40AB;
-
-  --yellow:  #FCEE21;
-  --green: #009245;
-
-  --blue1: #1BFFFF;
-  --blue2:  #2E3192;
-
-  --gradient1: linear-gradient(90deg, var(--orange), var(--pink) );
-  --gradient2: linear-gradient(90deg, var(--green), var(--yellow));
-  --gradient3: linear-gradient(90deg, var(--blue2), var(--blue1) );
 
   /*-------- Font and typography --------*/
   --heading-font: "Rubik", sans-serif;
@@ -89,6 +101,58 @@
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
   }
+}
+
+/*---------- Variables Gradient themes --------*/
+body.gradient-theme-1{
+  --gradient-theme: var(--gradient-1);
+  --hue-color: var(--color-1);
+  --first-color: hsl(var(--hue-color), 99%, 51%);
+  --first-color-second: hsl(var(--hue-color), 78%, 51%);
+  --first-color-alt: hsl(var(--hue-color), 100%, 40%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 3%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 99%, 90%);
+  --input-color-alt: hsl(var(--hue-color), 30%, 50%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --box-background-color: hsl(var(--hue-color), 0%, 100%);
+}
+
+body.gradient-theme-2{
+  --gradient-theme: var(--gradient-2);
+  --hue-color: var(--color-2);
+  --first-color: hsl(var(--hue-color), 99%, 51%);
+  --first-color-second: hsl(var(--hue-color), 78%, 51%);
+  --first-color-alt: hsl(var(--hue-color), 100%, 40%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 3%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 99%, 90%);
+  --input-color-alt: hsl(var(--hue-color), 30%, 50%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --box-background-color: hsl(var(--hue-color), 0%, 100%);
+}
+
+body.gradient-theme-3{
+  --gradient-theme: var(--gradient-3);
+  --hue-color: var(--color-3);
+  --first-color: hsl(var(--hue-color), 99%, 51%);
+  --first-color-second: hsl(var(--hue-color), 78%, 51%);
+  --first-color-alt: hsl(var(--hue-color), 100%, 40%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 3%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 99%, 90%);
+  --input-color-alt: hsl(var(--hue-color), 30%, 50%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --box-background-color: hsl(var(--hue-color), 0%, 100%);
 }
 
 /*-------- Variables Dark themes --------*/
@@ -190,12 +254,12 @@ img {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: linear-gradient(90deg,var(--orange),var(--pink));
+  background-image: var(--gradient-theme);
   color: transparent;
 }
 
 .hi-gradient {
-    background-image: linear-gradient(90deg,var(--orange),var(--pink));
+    background-image: var(--gradient-theme);
     border-radius: 3px;
     color: var(--h-color);
     padding: 0 4px;
@@ -293,7 +357,7 @@ img {
 }
 
 .nav_link,
-.themes_item{
+.theme_item{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,26 +370,29 @@ img {
   background-color: var(--box-background-color);
 }
 
-.themes_item{
+.theme_item{
   cursor: pointer;
   height: 3.5rem;
 }
 
-#theme1{
+#gradient-theme-1{
   color: #fff;
-  background-image: var(--gradient1);
+  background-image: var(--gradient-1);
 }
 
-#theme2{
+#gradient-theme-2{
   color: #fff;
-  background-image: var(--gradient2);
+  background-image: var(--gradient-2);
 }
 
-#theme3{
+#gradient-theme-3{
   color: #fff;
-  background-image: var(--gradient3);
+  background-image: var(--gradient-3);
 }
 
+.theme-selected::after{
+  content: 'Selected';
+}
 
 .nav_link:hover {
   color: var(--first-color);
@@ -374,7 +441,7 @@ img {
 /* Active link */
 .active-link{
   color: #fff;
-  background-image: var(--gradient1);
+  background-image: var(--gradient-theme);
 }
 
 /* Change background header */
@@ -482,7 +549,7 @@ img {
 
 .button{
   display: inline-block;
-  background-image: var(--gradient1);
+  background-image: var(--gradient-theme);
   color: #fff;
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
@@ -853,7 +920,7 @@ img {
 }
 
 .footer_bg{
-  background-image: var(--gradient1);
+  background-image: var(--gradient-theme);
   padding: 2rem 0 3rem;
 }
 
@@ -963,7 +1030,7 @@ img {
     text-align: center;
   }
 
-  .nav_link, .themes_item{
+  .nav_link, .theme_item{
     padding: 0.2rem 0.1rem;
   }
 
