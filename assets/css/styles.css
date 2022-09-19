@@ -52,7 +52,7 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   --box-background-color: hsl(var(--hue-color), 0%, 100%);
-  --card-shadow: 0 4px 8px rgba(0,30,84,.12);
+  --hover-shadow: 0 4px 8px rgba(0,30,84,.12);
   --card-bg: #fff;
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 
@@ -166,7 +166,7 @@ body.dark-theme{
   --box-background-color: hsl(var(--hue-color), 0%, 99%, 0.1);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-  --card-shadow: 0 4px 8px rgba(0,0,0,.38);
+  --hover-shadow: 0 4px 8px rgba(0,0,0,.38);
   --card-bg: #22262f;
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 }
@@ -269,12 +269,12 @@ img {
   background-color: var(--card-bg);
   padding: 0;
   border-radius: 0.5rem;
-  box-shadow: var(--card-shadow);
   overflow: hidden;
   transition: 0.3s;
 }
 
 .card:hover{
+  box-shadow: var(--hover-shadow);
   transform: translateY(-0.25rem);
 }
 
@@ -511,8 +511,13 @@ img {
   align-items: center;
   justify-content: center;
   background-color: var(--box-background-color);
+  transition: 0.3s;
 }
 
+.home_tagline-gray_box:hover{
+  box-shadow: var(--hover-shadow);
+  translate: translateY(-0.35rem);
+}
 .home_description{
   margin-top: var(--mb-1);
   margin-bottom: var(--mb-2);
@@ -554,11 +559,13 @@ img {
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
+  transition: 0.3s;
 }
 
 .button:hover{
-  transition: 0.3s;
   color: #FFF;
+  box-shadow: var(--hover-shadow);
+  translate: translateY(-0.25rem);
 }
 
 .button_icon{
@@ -596,6 +603,12 @@ img {
   border-radius: 0.5rem;
   justify-self: center;
   align-self: center;
+  transition: 0.3s;
+}
+
+.about_img:hover{
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-0.25rem);
 }
 
 .about_description{
@@ -628,6 +641,8 @@ img {
   margin-right: var(--mb-0-75);
 }
 
+
+
 .skills_title{
   font-size: var(--h3-font-size);
 }
@@ -655,6 +670,7 @@ img {
   padding: 0.4rem;
   border-radius: 0.5rem;
   background-color: var(--box-background-color);
+  transition: 0.3s;
 }
 
 .skills_name{
@@ -665,6 +681,10 @@ img {
   font-weight: var(--font-medium);
 }
 
+.skills_titles:hover{
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-0.25rem);
+}
 
 .skill_name_icons{
   height: 20px;
