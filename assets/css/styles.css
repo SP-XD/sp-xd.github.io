@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
 
 :root {
   --header-height: 3rem;
@@ -57,8 +58,8 @@
   /* --box-background-color: rgb(196, 196, 196, 20%); */
 
   /*-------- Font and typography --------*/
-  --heading-font: "Rubik", sans-serif;
-  --body-font: "Poppins", sans-serif;
+  --heading-font: "rubik", sans-serif;
+  --body-font: "quicksand", sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 3rem;
@@ -70,8 +71,8 @@
   --smaller-font-size: 0.75rem;
 
   /*-------- Font weight --------*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
+  --font-medium: 600;
+  --font-semi-bold: 700;
 
   /*-------- Margins Bottom --------*/
   /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
@@ -316,6 +317,10 @@ img {
   font-weight: var(--font-medium);
 }
 
+.nav_logo{
+  font-size: 1.1rem;
+}
+
 .nav_logo:hover {
   color: var(--first-color);
 }
@@ -364,7 +369,7 @@ img {
   justify-content: center;
   font-size: var(--small-font-size);
   color: var(--title-color);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
   padding: 0.3rem;
   border-radius: 0.5rem;
   background-color: var(--box-background-color);
