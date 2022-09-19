@@ -658,8 +658,18 @@ img {
 }
 
 .skills_name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+}
+
+
+.skill_name_icons{
+  height: 20px;
+  width: auto;
+  margin-right: 5px;
 }
 
 .skills_close .skills_list {
