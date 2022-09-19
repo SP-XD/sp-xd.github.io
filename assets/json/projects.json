@@ -10,13 +10,13 @@
         "title" : "Fistagram",
         "image" : "assets/img/projects/fistagram.jpg",
         "description" : "A instagram clone with different design.",
-        "sourceLink": "https:github.com/sp-xd/fistagram"
+        "sourceLink": "https://github.com/sp-xd/fistagram"
     },
     {
         "title": "Portfolio",
         "image" : "assets/img/projects/portfolio.jpg",
         "description": "My personal portfolio built using html, css & javascript.",
-        "sourceLink": "https:github.com/sp-xd/portfolio"
+        "sourceLink": "https://github.com/sp-xd/portfolio"
     },
     {
         "title": "Custom Roms & kernels",
