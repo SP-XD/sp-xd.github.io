@@ -349,10 +349,14 @@ darkLightThemeButton.addEventListener("click", () => {
 /*------------------- Color Themes --------------------- */
 const gradientThemesButtons = document.querySelectorAll(".theme_item");
 
-const selectedGradientTheme= localStorage.getItem("selectedGradientTheme");
+const selectedGradientThemeIndexNumber=localStorage.getItem("selectedGradientThemeIndexNumber");
 
-if(selectedGradientTheme){
-  document.body.classList.add(selectedGradientTheme);
+if(selectedGradientThemeIndexNumber){
+  gradientThemesButtons.forEach((el, id)=>{
+    if(selectedGradientThemeIndexNumber==id){
+      toggleColorTheme(el, id);
+    }
+  });
 }
 
 function toggleColorTheme(element, idNumber) {
@@ -368,7 +372,8 @@ function toggleColorTheme(element, idNumber) {
     element.classList.add("theme-selected");
   }
 
-  localStorage.setItem('selectedGradientTheme', itemId);
+  //storing current gradient theme to local storage
+  localStorage.setItem('selectedGradientThemeIndexNumber', indexNumber);
 }
 
 gradientThemesButtons.forEach((el, id) => {
