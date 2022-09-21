@@ -359,18 +359,16 @@ if(selectedGradientThemeIndexNumber){
   });
 }
 
-function toggleColorTheme(element, idNumber) {
-  let itemClass = element.className;
+function toggleColorTheme(element, indexNumber) {
   let itemId = element.id;
   
   for (let i = 0; i < gradientThemesButtons.length; i++) {
     gradientThemesButtons[i].classList.remove("theme-selected");
     document.body.classList.remove("gradient-theme-"+(i+1));
   }
-  if (itemClass === "theme_item") {
-    document.body.classList.add(itemId);
-    element.classList.add("theme-selected");
-  }
+
+  document.body.classList.add(itemId);
+  element.classList.add("theme-selected");
 
   //storing current gradient theme to local storage
   localStorage.setItem('selectedGradientThemeIndexNumber', indexNumber);

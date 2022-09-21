@@ -36,7 +36,7 @@
   --gradient-theme: var(--gradient-1);
 
   /*---------Default flat Color--------*/
-  --hue-color: var(--color-2);
+  --hue-color: var(--color-1);
   
   /*--------- Light Color theme ---------*/
   --first-color: hsl(var(--hue-color), 99%, 51%);
