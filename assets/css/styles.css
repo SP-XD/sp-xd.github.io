@@ -18,7 +18,7 @@
   --pink-1: #FF40AB;
 
   --purple-1:  #ff06f4;
-  --violet-1: #3801d5;
+  --violet-1: #4400ff;
 
   --blue-1: #1BFFFF;
   --blue-2:  #3239ff;
@@ -126,7 +126,7 @@ body.gradient-theme-1{
 body.gradient-theme-2{
   --gradient-theme: var(--gradient-2);
   --hue-color: var(--color-2);
-  --first-color: hsl(var(--hue-color), 99%, 51%);
+  --first-color: hsl(var(--hue-color), 99%, 60%);
   --first-color-second: hsl(var(--hue-color), 78%, 51%);
   --first-color-alt: hsl(var(--hue-color), 100%, 40%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
