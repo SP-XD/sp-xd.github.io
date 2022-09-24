@@ -7,29 +7,30 @@
 
   /*--------- Flat Color list-----*/
   /* Hsl color */
-  --red-0: 15;
-  --green-0: 110;
-  --ocean-blue-0: 200;
-  --blue-0: 220;
+  --red-hsl-0: 15;
+  --green-hsl-0: 110;
+  --violet-hsl-0: 260; 
+  --ocean-blue-hsl-0: 200;
+  --blue-hsl-0: 220;
 
   /* Hex color */
   --orange-1: #fa8142 ;
   --pink-1: #FF40AB;
 
-  --yellow-2:  #FCEE21;
-  --green-1: #009245;
+  --purple-1:  #ff06f4;
+  --violet-1: #3801d5;
 
   --blue-1: #1BFFFF;
-  --blue-2:  #2E3192;
+  --blue-2:  #3239ff;
 
   /* flat color theme list */
-  --color-1:var(--red-0);
-  --color-2:var(--green-0);
-  --color-3:var(--blue-0);
+  --color-1:var(--red-hsl-0);
+  --color-2:var(--violet-hsl-0);
+  --color-3:var(--blue-hsl-0);
 
   /*---------Gradient theme list------*/
   --gradient-1: linear-gradient(90deg, var(--orange-1), var(--pink-1) );
-  --gradient-2: linear-gradient(90deg, var(--green-1), var(--yellow-2));
+  --gradient-2: linear-gradient(90deg, var(--violet-1), var(--purple-1));
   --gradient-3: linear-gradient(90deg, var(--blue-2), var(--blue-1) );
 
   /* -----Default Gradient theme---- */
