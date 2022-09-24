@@ -375,11 +375,8 @@ img {
   padding: 0.3rem;
   border-radius: 0.5rem;
   background-color: var(--box-background-color);
-}
-
-.theme_item{
-  cursor: pointer;
   height: 3.5rem;
+  cursor: pointer;
 }
 
 #gradient-theme-1{
@@ -1223,7 +1220,7 @@ img {
     height: 260px;
     padding: 0.5rem;
     background-color: var(--body-color);
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1rem;
     transition: 0.3s;
   }
