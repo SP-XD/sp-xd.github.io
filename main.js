@@ -23,12 +23,14 @@ const themesMenu = document.getElementById("themes-menu"),
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
+    themesMenu.classList.remove("show-menu");
   });
 }
 
 if (themesToggle) {
   themesToggle.addEventListener("click", () => {
     themesMenu.classList.add("show-menu");
+    navMenu.classList.remove("show-menu");
   });
 }
 
@@ -218,7 +220,7 @@ gql(GET_USER_ARTICLES, { page: 0 })
             let blog_content =document.createElement('div');
             blog_content.classList.add('blog_content');
 
-            let article_link = `https://somnathpaul.hashnode.dev/${article.slug}`;
+            let article_link = `https://blogs.somnathpaul.in/${article.slug}`;
 
             let title = document.createElement('h3');
             title.classList.add('blog_title');
