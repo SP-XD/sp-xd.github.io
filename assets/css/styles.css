@@ -955,7 +955,6 @@ img {
 /*---------------- FOOTER ----------------*/
 .footer{
   padding-top: 2rem;
-
 }
 
 .footer_container{
@@ -995,11 +994,19 @@ img {
   color: var(--first-color-lighter);
 }
 
+.footer_disclaimer,
 .footer_copyright{
   font-size: var(--smaller-font-size);
   color: var(--first-color-lighter);
   text-align: center;
   margin-top: var(--mb-3);
+}
+
+.footer_disclaimer{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem ;  
+  max-width: 668px;
 }
 
 .footer_title,
@@ -1303,6 +1310,11 @@ img {
 
   .footer_container{
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer_links{
+    flex-direction: row;
+    gap: 1.5rem;
   }
 
   .footer_bg{
