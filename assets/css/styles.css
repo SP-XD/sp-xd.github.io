@@ -1070,20 +1070,6 @@ img {
     margin-left: var(--mb-1);
   }
 
-  .nav_menu, .themes_menu{
-    padding: 1.5rem 1rem 4rem;
-  }
-
-  .nav_list, .themes_list{
-    column-gap: 0.5rem;
-    row-gap: 0.5rem;
-    text-align: center;
-  }
-
-  .nav_link, .theme_item{
-    padding: 0.2rem 0.1rem;
-  }
-
   .menu_title{
     font-size: var(--h3-font-size);
     left: 1rem;
