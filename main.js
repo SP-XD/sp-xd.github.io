@@ -1,4 +1,4 @@
-import projectsData from "./assets/json/projects.json" assert { type: "json" };
+// import projectsData from "./assets/json/projects.json" assert { type: "json" };
 
 const reveal = {
   distance: "30px",
@@ -102,31 +102,37 @@ modalCloses.forEach((modelClose) => {
 });
 
 /*-------------------------PROJECTS-------------------- */
-console.log(projectsData);
-document.getElementById("project-cards").innerHTML = `
-   ${projectsData
-     .map(function (project) {
-       return `
-    <!-----------Project Card--------------->
-     <div class="project_card card swiper-slide" >
-
-      <img class="project_image" src="${project.image}"/>
-
-      <div class="project_data">
-        <h3 class="project_title">${project.title}</h3>
-
-        <p class="project_description">
-            ${project.description}
-        </p>
-
-        <a href="${project.sourceLink}" target="_blank" class="button button-flex button-small project_button">Checkout<i class="uil uil-external-link-alt button_icon checkout_button_icon"></i></a>
-
-      </div>
-    </div> 
-    `;
-     })
-     .join("")} 
-`;
+await fetch("./assets/json/projects.json")
+    .then(response=>{ 
+    return response.json();
+    })
+    .then(projectsData => {  
+      console.log(projectsData);
+      document.getElementById("project-cards").innerHTML = `
+         ${projectsData
+           .map(function (project) {
+             return `
+          <!-----------Project Card--------------->
+           <div class="project_card card swiper-slide" >
+          
+            <img class="project_image" src="${project.image}"/>
+          
+            <div class="project_data">
+              <h3 class="project_title">${project.title}</h3>
+          
+              <p class="project_description">
+                  ${project.description}
+              </p>
+          
+              <a href="${project.sourceLink}" target="_blank" class="button button-flex button-small project_button">Checkout<i class="uil uil-external-link-alt button_icon checkout_button_icon"></i></a>
+          
+            </div>
+          </div> 
+          `;
+           })
+           .join("")} 
+      `;
+    });
 
 /*-------------------- PROJECTS SWIPER  ----------------*/
 var swiper = new Swiper(".projects_content", {
