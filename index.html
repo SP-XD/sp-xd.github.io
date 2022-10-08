@@ -1,476 +1,409 @@
 <!DOCTYPE html>
 <html lang="en" class="sr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Somnath Paul</title>
-  </head>
-  <body>
-    <!---------------- HEADER ---------------->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="" class="nav_logo">Somnath</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="themes_menu" id="themes-menu">
-          <ul class="themes_list">
-            <li class="theme_item theme-selected" id="gradient-theme-1"></li>
-            <li class="theme_item" id="gradient-theme-2"></li>
-            <li class="theme_item" id="gradient-theme-3"></li>
-          </ul>
-          <h1 class="themes_title menu_title">Themes</h1>
-          <i class="uil uil-times themes_close" id="themes-close"></i>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Somnath Paul</title>
+</head>
+
+<body>
+  <!--          HEADER          -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="" class="nav_logo">Somnath</a>
+
+      <div class="themes_menu" id="themes-menu">
+        <ul class="themes_list">
+          <li class="theme_item theme-selected" id="gradient-theme-1"></li>
+          <li class="theme_item" id="gradient-theme-2"></li>
+          <li class="theme_item" id="gradient-theme-3"></li>
+        </ul>
+        <h2 class="themes_title menu_title">Themes</h2>
+        <i class="uil uil-times themes_close" id="themes-close"></i>
+      </div>
+
+      <div class="nav_menu" id="nav-menu">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="#home" class="nav_link active-link">
+              <i class="uil uil-estate nav_icon"></i> Home
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#about" class="nav_link">
+              <i class="uil uil-user nav_icon"></i> About
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#skills" class="nav_link">
+              <i class="uil uil-file-alt nav_icon"></i> Skills
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#projects" class="nav_link">
+              <i class="uil uil-scenery nav_icon"></i> Projects
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#blogs" class="nav_link">
+              <i class="uil uil-notebooks nav_icon"></i> Blogs
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#services" class="nav_link">
+              <i class="uil uil-briefcase-alt nav_icon"></i> Services
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#contact" class="nav_link">
+              <i class="uil uil-message nav_icon"></i> Contact
+            </a>
+          </li>
+        </ul>
+        <h2 class="nav_title menu_title">Menu</h2>
+        <i class="uil uil-times nav_close" id="nav-close"></i>
+      </div>
+
+      <div class="nav_buttons">
+        <!--DARK-LIGHT-THEME-BUTTON-->
+        <i class="uil uil-moon dark_light-theme" id="dark_light-theme-button"></i>
+        <div class="themes_menu_toggle" id="themes-menu-toggle">
+          <!-- Themes -->
+          <i class="uil uil-paint-tool"></i>
         </div>
-
-        <div class="nav_menu" id="nav-menu">
-          <ul class="nav_list">
-            <li class="nav_item">
-              <a href="#home" class="nav_link active-link">
-                <i class="uil uil-estate nav_icon"></i> Home
-              </a>
-            </li>
-            <li class="nav_item">
-              <a href="#about" class="nav_link">
-                <i class="uil uil-user nav_icon"></i> About
-              </a>
-            </li>
-            <li class="nav_item">
-              <a href="#skills" class="nav_link">
-                <i class="uil uil-file-alt nav_icon"></i> Skills
-              </a>
-            </li>
-            <li class="nav_item">
-              <a href="#projects" class="nav_link">
-                <i class="uil uil-scenery nav_icon"></i> Projects
-              </a>
-            </li>
-            <li class="nav_item">
-              <a href="#blogs" class="nav_link">
-                <i class="uil uil-notebooks nav_icon"></i> Blogs
-              </a>
-            </li>
-            <li class="nav_item">
-              <a href="#services" class="nav_link">
-                <i class="uil uil-briefcase-alt nav_icon"></i> Services
-              </a>
-            </li>
-            <li class="nav_item">
-              <a href="#contact" class="nav_link">
-                <i class="uil uil-message nav_icon"></i> Contact
-              </a>
-            </li>
-          </ul>
-          <h1 class="nav_title menu_title">Menu</h1>
-          <i class="uil uil-times nav_close" id="nav-close"></i>
+        <div class="nav_toggle" id="nav-toggle">
+          <i class="uil uil-folder-open"></i>
         </div>
+      </div>
+    </nav>
+  </header>
 
-        <div class="nav_buttons">
-          <!--DARK-LIGHT-THEME-BUTTON-->
-          <i
-            class="uil uil-moon dark_light-theme"
-            id="dark_light-theme-button"
-          ></i>
-          <div class="themes_menu_toggle" id="themes-menu-toggle">
-            <!-- Themes -->
-            <i class="uil uil-paint-tool"></i>
-          </div>
-          <div class="nav_toggle" id="nav-toggle">
-            <i class="uil uil-folder-open"></i>
-          </div>
-        </div>
-      </nav>
-    </header>
+  <!--         MAIN         -->
+  <main class="main load-hidden">
+    <!--       HOME         -->
+    <section class="home section" id="home">
+      <div class="home_container container grid">
+        <div class="home_content grid">
+          <div class="home_social">
+            <a href="https://linkedin.com/in/spxd/" target="_blank" class="home_social-icon">
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
 
-    <!---------------- MAIN ---------------->
-    <main class="main load-hidden">
-      <!---------------- HOME ---------------->
-      <section class="home section" id="home">
-        <div class="home_container container grid">
-          <div class="home_content grid">
-            <div class="home_social">
-              <a
-                href="https://linkedin.com/in/spxd/"
-                target="_blank"
-                class="home_social-icon"
-              >
-                <i class="uil uil-linkedin-alt"></i>
-              </a>
+            <a href="https://github.com/sp-xd" target="_blank" class="home_social-icon">
+              <i class="uil uil-github-alt"></i>
+            </a>
 
-              <a
-                href="https://github.com/sp-xd"
-                target="_blank"
-                class="home_social-icon"
-              >
-                <i class="uil uil-github-alt"></i>
-              </a>
+            <a href="https://instagram.com/spxd_insta" target="_blank" class="home_social-icon">
+              <i class="uil uil-instagram"></i>
+            </a>
 
-              <a
-                href="https://instagram.com/spxd_insta"
-                target="_blank"
-                class="home_social-icon"
-              >
-                <i class="uil uil-instagram"></i>
-              </a>
-
-              <!--a
+            <!--a
                 href="https://twitter.com/spxd_twitteer"
                 class="home_social-icon"
               >
                 <i class="uil uil-twitter-alt"></i>
               </a-->
 
-              <a
-                href="https://t.me/spxd007"
-                target="_blank"
-                class="home_social-icon"
-              >
-                <i class="uil uil-telegram-alt"></i>
-              </a>
-            </div>
-
-            <div class="home_img">
-              <svg
-                class="home_blob"
-                viewBox="0 0 261 297"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <mask id="mask0" mask-type="alpha">
-                  <path
-                    d="M260.035 0.415504L57.306 29.806C53.1026 30.4154 49.7427 33.6136 48.9269 37.7818L0.582501 284.787C-0.704427 291.363 4.71234 297.319 11.3799 296.66L174.068 280.579C178.526 280.139 182.147 276.787 182.93 272.376L227.351 22.0986C227.621 20.576 226.786 19.0728 225.35 18.4985C224.811 18.283 224.225 18.2151 223.651 18.3017L140.689 30.8233L260.035 0.415504Z"
-                  />
-                </mask>
-                <g mask="url(#mask0)">
-                  <path
-                    d="M260.035 0.415504L57.306 29.806C53.1026 30.4154 49.7427 33.6136 48.9269 37.7818L0.582501 284.787C-0.704427 291.363 4.71234 297.319 11.3799 296.66L174.068 280.579C178.526 280.139 182.147 276.787 182.93 272.376L227.351 22.0986C227.621 20.576 226.786 19.0728 225.35 18.4985C224.811 18.283 224.225 18.2151 223.651 18.3017L140.689 30.8233L260.035 0.415504Z"
-                  />
-                  <image
-                    class="home_blob-img"
-                    x="0"
-                    y="0"
-                    href="./assets/img/home_blob-img-transparent.webp"
-                  />
-                </g>
-              </svg>
-            </div>
-
-            <div class="home_data">
-              <h1 class="home_title gradient-text">&lt;Hello World/&gt;</h1>
-              <h2 class="home_subtitle">
-                I'm
-                <span class="hi-gradient" style="color: white">
-                  Somnath Paul</span
-                >
-                !
-              </h2>
-              <div class="home_tagline-gray_box">
-                <p class="home_tagline">Full stack developer</p>
-              </div>
-              <p class="home_description">
-                <strong>Tech</strong> enthusiast, <strong>Self</strong> learner,
-                & a <strong>Goal</strong> driven person. Interested in building
-                real life projects.
-              </p>
-              <a href="#contact" class="button button-flex">
-                Contact Me <i class="uil uil-message button_icon"></i>
-              </a>
-            </div>
+            <a href="https://t.me/spxd007" target="_blank" class="home_social-icon">
+              <i class="uil uil-telegram-alt"></i>
+            </a>
           </div>
 
-          <div class="home_scroll">
-            <a href="#about" class="home_scroll-button button-flex">
-              <i class="uil uil-mouse-alt home_scroll-mouse"></i>
-              <span class="home_scroll-name">Scroll Down</span>
-              <i class="uil uil-angle-double-down home_scroll-arrow"></i>
+          <div class="home_img">
+            <svg class="home_blob" viewBox="0 0 261 297" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <mask id="mask0" mask-type="alpha">
+                <path
+                  d="M260.035 0.415504L57.306 29.806C53.1026 30.4154 49.7427 33.6136 48.9269 37.7818L0.582501 284.787C-0.704427 291.363 4.71234 297.319 11.3799 296.66L174.068 280.579C178.526 280.139 182.147 276.787 182.93 272.376L227.351 22.0986C227.621 20.576 226.786 19.0728 225.35 18.4985C224.811 18.283 224.225 18.2151 223.651 18.3017L140.689 30.8233L260.035 0.415504Z" />
+              </mask>
+              <g mask="url(#mask0)">
+                <path
+                  d="M260.035 0.415504L57.306 29.806C53.1026 30.4154 49.7427 33.6136 48.9269 37.7818L0.582501 284.787C-0.704427 291.363 4.71234 297.319 11.3799 296.66L174.068 280.579C178.526 280.139 182.147 276.787 182.93 272.376L227.351 22.0986C227.621 20.576 226.786 19.0728 225.35 18.4985C224.811 18.283 224.225 18.2151 223.651 18.3017L140.689 30.8233L260.035 0.415504Z" />
+                <image class="home_blob-img" x="0" y="0" href="./assets/img/home_blob-img-transparent.webp" />
+              </g>
+            </svg>
+          </div>
+
+          <div class="home_data">
+            <h2 class="home_title gradient-text">&lt;Hello World/&gt;</h2>
+            <h2 class="home_subtitle">
+              I'm
+              <span class="hi-gradient" style="color: white">
+                Somnath Paul</span>
+              !
+            </h2>
+            <div class="home_tagline-gray_box">
+              <p class="home_tagline">Full stack developer</p>
+            </div>
+            <p class="home_description">
+              <strong>Tech</strong> enthusiast, <strong>Self</strong> learner,
+              & a <strong>Goal</strong> driven person. Interested in building
+              real life projects.
+            </p>
+            <a href="#contact" class="button button-flex">
+              Contact Me <i class="uil uil-message button_icon"></i>
             </a>
           </div>
         </div>
-      </section>
 
-      <!---------------- ABOUT ---------------->
-      <section class="about section" id="about">
-        <h2 class="section_title">👨‍💻 <span class="gradient-text">ABOUT ME</span></h2>
-        <span class="section_subtitle">MY INTRODUCTION</span>
+        <div class="home_scroll">
+          <a href="#about" class="home_scroll-button button-flex">
+            <i class="uil uil-mouse-alt home_scroll-mouse"></i>
+            <span class="home_scroll-name">Scroll Down</span>
+            <i class="uil uil-angle-double-down home_scroll-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <div class="about_container container grid">
-          <img
-            src="assets/img/dev-working_rounded.gif"
-            alt=""
-            class="about_img"
-          />
+    <!--         ABOUT        -->
+    <section class="about section" id="about">
+      <h2 class="section_title">👨‍💻 <span class="gradient-text">ABOUT ME</span></h2>
+      <span class="section_subtitle">MY INTRODUCTION</span>
 
-          <div class="about_data">
-            <p class="about_description">
-              <strong>Hi!</strong> I am a 3rd year BCA student, who is
-              interested in GNU/linux, Web development, Flutter development,
-              UI/UX and DevOps. I am a passionate learner who has a craving for
-              building projects.
-            </p>
-            <div class="about_buttons">
-              <a
-                href="https://drive.google.com/file/d/1MEQ1xOpPR43OT7W_tY5lEVK-0sryl-cG/view"
-                target="_blank"
-                class="button button-flex"
-              >
-                Resume <i class="uil uil-file-share-alt button_icon"></i>
-              </a>
-            </div>
+      <div class="about_container container grid">
+        <img src="assets/img/dev-working_rounded.gif" alt="" class="about_img">
+
+        <div class="about_data">
+          <p class="about_description">
+            <strong>Hi!</strong> I am a 3rd year BCA student, who is
+            interested in GNU/linux, Web development, Flutter development,
+            UI/UX and DevOps. I am a passionate learner who has a craving for
+            building projects.
+          </p>
+          <div class="about_buttons">
+            <a href="https://drive.google.com/file/d/1MEQ1xOpPR43OT7W_tY5lEVK-0sryl-cG/view" target="_blank"
+              class="button button-flex">
+              Resume <i class="uil uil-file-share-alt button_icon"></i>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!---------------- SKILLS ---------------->
-      <section class="skills section" id="skills">
-        <h2 class="section_title">🎯 <span class="gradient-text">SKILLS</span></h2>
-        <span class="section_subtitle">TECH THAT I USE DAILY BASIS</span>
+    <!--         SKILLS         -->
+    <section class="skills section" id="skills">
+      <h2 class="section_title">🎯 <span class="gradient-text">SKILLS</span></h2>
+      <span class="section_subtitle">TECH THAT I USE DAILY BASIS</span>
 
-        <div class="skills_container container grid">
-          <!---SKILL 1-->
-          <div class="skills_content skills_open">
-            <div class="skills_header">
-              <i class="uil uil-brackets-curly skills_icon"></i>
+      <div class="skills_container container grid">
+        <!---SKILL 1-->
+        <div class="skills_content skills_open">
+          <div class="skills_header">
+            <i class="uil uil-brackets-curly skills_icon"></i>
 
-              <div>
-                <h1 class="skills_title">Languages</h1>
-              </div>
-
-              <i class="uil uil-angle-down skills_arrow"></i>
+            <div>
+              <h2 class="skills_title">Languages</h2>
             </div>
 
-            <div class="skills_list grid">
-              <div class="skills_data">
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
-                    />
-                    Dart
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                    />
-                    Java
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                    />
-                    Python
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                    />
-                    HTML
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                    />
-
-                    CSS
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    />
-
-                    Javascript
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                    />
-                    Cpp
-                  </h3>
-                </div>
-              </div>
-            </div>
+            <i class="uil uil-angle-down skills_arrow"></i>
           </div>
-          <!---SKILL 2 -->
-          <div class="skills_content skills_close">
-            <div class="skills_header">
-              <i class="uil uil-vertical-align-bottom skills_icon"></i>
-              <div>
-                <h1 class="skills_title">Libraries, Frameworks & etc</h1>
+
+          <div class="skills_list grid">
+            <div class="skills_data">
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">
+                  Dart
+                </h3>
               </div>
-
-              <i class="uil uil-angle-down skills_arrow"></i>
-            </div>
-
-            <div class="skills_list grid">
-              <div class="skills_data">
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                    />
-                    Flutter
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">SwiperJs</h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                    />
-                    NodeJs
-                  </h3>
-                </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">
+                  Java
+                </h3>
               </div>
-            </div>
-          </div>
-          <!---SKILL 3-->
-          <div class="skills_content skills_close">
-            <div class="skills_header">
-              <i class="uil uil-database skills_icon"></i>
-              <div>
-                <h1 class="skills_title">Databases</h1>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">
+                  Python
+                </h3>
               </div>
-
-              <i class="uil uil-angle-down skills_arrow"></i>
-            </div>
-
-            <div class="skills_list grid">
-              <div class="skills_data">
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                    />
-                    Firebase
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
-                    />
-                    SQLite
-                  </h3>
-                </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">
+                  HTML
+                </h3>
               </div>
-            </div>
-          </div>
-          <!---SKILL 4-->
-          <div class="skills_content skills_close">
-            <div class="skills_header">
-              <i class="uil uil-wrench skills_icon"></i>
-              <div>
-                <h1 class="skills_title">Graphics & Other Tools</h1>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">
+
+                  CSS
+                </h3>
               </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">
 
-              <i class="uil uil-angle-down skills_arrow"></i>
-            </div>
-
-            <div class="skills_list grid">
-              <div class="skills_data">
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                    />
-                    Git/Github
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                    />
-                    Figma
-                  </h3>
-                </div>
-                <div class="skills_titles">
-                  <h3 class="skills_name">
-                    <img
-                      class="skill_name_icons"
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
-                    />
-                    Photoshop
-                  </h3>
-                </div>
+                  Javascript
+                </h3>
+              </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="">
+                  Cpp
+                </h3>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <!---------------- Projects ---------------->
-      <section class="projects section" id="projects">
-        <h2 class="section_title">🏗️ <span class="gradient-text">PROJECTS</span></h2>
-        <span class="section_subtitle">MAJOR PROJECTS I HAVE DONE</span>
-
-        <!-- <h4 style="text-align: center;">coming Soon!</h4> -->
-
-        <div class="projects_container swiper">
-          <div class="projects_content">
-            <div class="project_cards swiper-wrapper" id="project-cards">
-              <!--Project data will be filled by js-->
+        <!---SKILL 2 -->
+        <div class="skills_content skills_close">
+          <div class="skills_header">
+            <i class="uil uil-vertical-align-bottom skills_icon"></i>
+            <div>
+              <h2 class="skills_title">Libraries, Frameworks & etc</h2>
             </div>
-            <!-- <div class="swiper-button-next"></div> -->
-            <!-- <div class="swiper-button-prev"></div> -->
-            <div class="swiper-pagination"></div>
+
+            <i class="uil uil-angle-down skills_arrow"></i>
+          </div>
+
+          <div class="skills_list grid">
+            <div class="skills_data">
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="">
+                  Flutter
+                </h3>
+              </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">SwiperJs</h3>
+              </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="">
+                  NodeJs
+                </h3>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+        <!---SKILL 3-->
+        <div class="skills_content skills_close">
+          <div class="skills_header">
+            <i class="uil uil-database skills_icon"></i>
+            <div>
+              <h2 class="skills_title">Databases</h2>
+            </div>
 
-      <!----------------- Blogs ----------------->
-      <section class="blogs section" id="blogs">
-        <h2 class="section_title">📰 <span class="gradient-text">BLOGS</span></h2>
-        <span class="section_subtitle">RECENT ARTICLES BY ME</span>
+            <i class="uil uil-angle-down skills_arrow"></i>
+          </div>
 
-        <div class="blogs_container container">
-          <!--Injected articles here-->
+          <div class="skills_list grid">
+            <div class="skills_data">
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="">
+                  Firebase
+                </h3>
+              </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="">
+                  SQLite
+                </h3>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- <h4 style="text-align: center;">coming Soon!</h4> -->
-      </section>
+        <!---SKILL 4-->
+        <div class="skills_content skills_close">
+          <div class="skills_header">
+            <i class="uil uil-wrench skills_icon"></i>
+            <div>
+              <h2 class="skills_title">Graphics & Other Tools</h2>
+            </div>
 
-      <!---------------- SERVICES ---------------->
-      <section class="services section" id="services">
-        <h2 class="section_title">🚚 <span class="gradient-text">SERVICES</span></h2>
-        <span class="section_subtitle">WHAT I OFFER</span>
+            <i class="uil uil-angle-down skills_arrow"></i>
+          </div>
 
-        <p style="text-align: center">🚧 Under Construction!</p>
-        <!--*TODO redo services-->
-        <!-- div>
+          <div class="skills_list grid">
+            <div class="skills_data">
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+                  Git/Github
+                </h3>
+              </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="">
+                  Figma
+                </h3>
+              </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="">
+                  Photoshop
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--         Projects         -->
+    <section class="projects section" id="projects">
+      <h2 class="section_title">🏗️ <span class="gradient-text">PROJECTS</span></h2>
+      <span class="section_subtitle">MAJOR PROJECTS I HAVE DONE</span>
+
+      <!-- <h4 style="text-align: center;">coming Soon!</h4> -->
+
+      <div class="projects_container swiper">
+        <div class="projects_content">
+          <div class="project_cards swiper-wrapper" id="project-cards">
+            <!--Project data will be filled by js-->
+          </div>
+          <!-- <div class="swiper-button-next"></div> -->
+          <!-- <div class="swiper-button-prev"></div> -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--         Blogs        -->
+    <section class="blogs section" id="blogs">
+      <h2 class="section_title">📰 <span class="gradient-text">BLOGS</span></h2>
+      <span class="section_subtitle">RECENT ARTICLES BY ME</span>
+
+      <div class="blogs_container container">
+        <!--Injected articles here-->
+      </div>
+      <!-- <h4 style="text-align: center;">coming Soon!</h4> -->
+    </section>
+
+    <!--        SERVICES         -->
+    <section class="services section" id="services">
+      <h2 class="section_title">🚚 <span class="gradient-text">SERVICES</span></h2>
+      <span class="section_subtitle">WHAT I OFFER</span>
+
+      <p style="text-align: center">🚧 Under Construction!</p>
+      <!--*TODO redo services-->
+      <!-- div>
         <div class="services_container container grid">
-          -------------- SERVICES 1 --------------
+                     SERVICES 1             
             <div class="services_content">
               <div>
                 <i class="uil uil-web-grid services_icon"></i>
@@ -510,7 +443,7 @@
                 </div>
               </div>
             </div>
-            -------------- SERVICES 2 --------------
+                       SERVICES 2             
             <div class="services_content">
               <div>
                 <i class="uil uil-web-grid services_icon"></i>
@@ -550,7 +483,7 @@
                 </div>
               </div>
             </div>
-            -------------- SERVICES 3 --------------
+                       SERVICES 3           
             <div class="services_content">
               <div>
                 <i class="uil uil-web-grid services_icon"></i>
@@ -592,103 +525,83 @@
             </div>
         </div>
         </div-->
-      </section>
+    </section>
 
-      <!---------------- CONTACT ME ---------------->
-      <section class="contact section" id="contact">
-        <h2 class="section_title">🌎 <span class="gradient-text">CONTACT ME</span></h2>
-        <span class="section_subtitle">Get in touch</span>
+    <!--           CONTACT ME           -->
+    <section class="contact-          ontact">
+      <h2 class="section_title">🌎 <span class="gradient-text">CONTACT ME</span></h2>
+      <span class="section_subtitle">Get in touch</span>
 
-        <div class="contact_container container">
-          <a href="mailto:somnathpaul@duck.com" class="card contact_buttons">
-            <i class="uil uil-envelopes button_icon contact_buttons-icon"></i>
-            Mail Me
-          </a>
-          <a
-            href="https://calendly.com/somnathpaul/30min"
-            target="_blank"
-            class="card contact_buttons"
-          >
-            <i class="uil uil-schedule button_icon contact_buttons-icon"></i>
-            Online Meet
-          </a>
-          <a
-            href="https://www.linkedin.com/in/spxd/"
-            target="_blank"
-            class="card contact_buttons"
-          >
-            <i
-              class="uil uil-linkedin-alt button_icon contact_buttons-icon"
-            ></i>
-            Linkedin
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <!---------------- FOOTER ---------------->
-    <footer class="footer">
-      <div class="footer_bg">
-        <div class="footer_container container grid">
-          <div>
-            <h1 class="footer_title">Somnath Paul</h1>
-            <span class="footer_subtitle"> Full Stack Developer </span>
-          </div>
-
-          <ul class="footer_links">
-            <li>
-              <a href="#about" class="footer_link">AboutMe</a>
-            </li>
-            <li>
-              <a href="#projects" class="footer_link">Projects</a>
-            </li>
-            <li>
-              <a href="#blogs" class="footer_link">Blogs</a>
-            </li>
-            <li>
-              <a href="#contact" class="footer_link">ContactMe</a>
-            </li>
-          </ul>
-
-          <div class="footer_socials">
-            <a
-              href="https://linkedin.com/in/spxd/"
-              target="_blank"
-              class="footer_social"
-            >
-              <i class="uil uil-linkedin-alt"></i>
-            </a>
-
-            <a
-              href="https://instagram.com/spxd_insta"
-              target="_blank"
-              class="footer_social"
-            >
-              <i class="uil uil-instagram"></i>
-            </a>
-
-            <a
-              href="https://twitter.com/spxd_twitteer"
-              target="_blank"
-              class="footer_social"
-            >
-              <i class="uil uil-twitter-alt"></i>
-            </a>
-          </div>
-        </div>
-        <p class="footer_disclaimer">All product names, trademarks and registered trademarks are property of their respective owners.
-All company, product and service names used in this website are for identification purposes only. Use of these names, trademarks and brands does not imply endorsement or affiliation.</p>
-        <p class="footer_copyright">&#169; Somnath Paul. All rights reserved</p>
+      <div class="contact_container container">
+        <a href="mailto:somnathpaul@duck.com" class="card contact_buttons">
+          <i class="uil uil-envelopes button_icon contact_buttons-icon"></i>
+          Mail Me
+        </a>
+        <a href="https://calendly.com/somnathpaul/30min" target="_blank" class="card contact_buttons">
+          <i class="uil uil-schedule button_icon contact_buttons-icon"></i>
+          Online Meet
+        </a>
+        <a href="https://www.linkedin.com/in/spxd/" target="_blank" class="card contact_buttons">
+          <i class="uil uil-linkedin-alt button_icon contact_buttons-icon"></i>
+          Linkedin
+        </a>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <!---------------- SCROLL TOP ---------------->
-    <a href="#home" class="scrollup" id="scroll-up">
-      <i class="uil uil-arrow-up scrollup_icon"></i>
-    </a>
-    <!-----------------swiper js----------------->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!---------------- MAIN JS ---------------->
-    <script type="module" src="main.js"></script>
-  </body>
+  <!--           FOOTER          -->
+  <footer class="footer">
+    <div class="footer_bg">
+      <div class="footer_container container grid">
+        <div>
+          <h1 class="footer_title">Somnath Paul</h1>
+          <span class="footer_subtitle"> Full Stack Developer </span>
+        </div>
+
+        <ul class="footer_links">
+          <li>
+            <a href="#about" class="footer_link">AboutMe</a>
+          </li>
+          <li>
+            <a href="#projects" class="footer_link">Projects</a>
+          </li>
+          <li>
+            <a href="#blogs" class="footer_link">Blogs</a>
+          </li>
+          <li>
+            <a href="#contact" class="footer_link">ContactMe</a>
+          </li>
+        </ul>
+
+        <div class="footer_socials">
+          <a href="https://linkedin.com/in/spxd/" target="_blank" class="footer_social">
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+
+          <a href="https://instagram.com/spxd_insta" target="_blank" class="footer_social">
+            <i class="uil uil-instagram"></i>
+          </a>
+
+          <a href="https://twitter.com/spxd_twitteer" target="_blank" class="footer_social">
+            <i class="uil uil-twitter-alt"></i>
+          </a>
+        </div>
+      </div>
+      <p class="footer_disclaimer">All product names, trademarks and registered trademarks are property of their
+        respective owners.
+        All company, product and service names used in this website are for identification purposes only. Use of these
+        names, trademarks and brands does not imply endorsement or affiliation.</p>
+      <p class="footer_copyright">&#169; Somnath Paul. All rights reserved</p>
+    </div>
+  </footer>
+
+  <!--           SCROLL TOP           -->
+  <a href="#home" class="scrollup" id="scroll-up">
+    <i class="uil uil-arrow-up scrollup_icon"></i>
+  </a>
+  <!--           swiper j         -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!--           MAIN JS          -->
+  <script type="module" src="main.js"></script>
+</body>
 </html>
