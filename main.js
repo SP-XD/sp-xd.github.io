@@ -79,27 +79,6 @@ skillsHeader.forEach((el) => {
 });
 
 /*---------------- SERVICES MODAL ----------------*/
-const modalViews = document.querySelectorAll(".services_model"),
-  modalButtons = document.querySelectorAll(".services_button"),
-  modalCloses = document.querySelectorAll(".services_model-close");
-
-let modal = function (modalClick) {
-  modalViews[modalClick].classList.add("active-model");
-};
-
-modalButtons.forEach((modalButton, i) => {
-  modalButton.addEventListener("click", () => {
-    modal(i);
-  });
-});
-
-modalCloses.forEach((modelClose) => {
-  modelClose.addEventListener("click", () =>
-    modalViews.forEach((modalView) => {
-      modalView.classList.remove("active-model");
-    })
-  );
-});
 
 /*-------------------------PROJECTS-------------------- */
 await fetch("./assets/json/projects.json")
