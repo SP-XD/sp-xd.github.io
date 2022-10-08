@@ -7,8 +7,9 @@
 ### [Features](#features-) • [Tech Stack](#tech-stack-) • [Contents](#contents-) • [Contribute](#-how-to-contribute-) 
 
 ![MIT License](https://img.shields.io/bower/l/mi)
-![Lines of code](https://img.shields.io/tokei/lines/github/SP-XD/sp-xd.github.io)
 ![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fsomnathpaul.in)
+![Lines of code](https://sloc.xyz/github/sp\-xd/sp\-xd.github.io)
+![views](https://visitor-badge.laobi.icu/badge?page_id=sp\-xd/sp\-xd.github.io)
 
 </div>
 
@@ -80,3 +81,4 @@ Here is some others: <br>
 
 ## License
 By contributing, you agree that your contributions will be licensed under its MIT License.
+
