@@ -750,7 +750,9 @@ img {
   flex-direction: column;
   width: 320px;
 }
-
+.project_card:hover{
+  transform: scale(1.1);
+}
 .project_data{
   padding: 20px;
   display: flex;
