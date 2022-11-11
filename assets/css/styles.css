@@ -899,7 +899,8 @@ img {
 }
 
 .footer_disclaimer,
-.footer_copyright {
+.footer_copyright,
+.footer_credit {
   font-size: var(--smaller-font-size);
   color: var(--first-color-lighter);
   text-align: center;
@@ -911,6 +912,14 @@ img {
   margin-right: auto;
   padding: 0 1rem;
   max-width: 668px;
+}
+
+.footer_credit a {
+  color: var(--first-color-lighter);
+}
+
+.footer_credit a:hover {
+  color: var(--first-color-second);
 }
 
 .footer_title,
