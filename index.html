@@ -2,12 +2,12 @@
 <html lang="en" class="sr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>Somnath Paul</title>
 </head>
@@ -24,7 +24,7 @@
           <li class="theme_item" id="gradient-theme-2"></li>
           <li class="theme_item" id="gradient-theme-3"></li>
         </ul>
-        <h1 class="themes_title menu_title">Themes</h1>
+        <h2 class="themes_title menu_title">Themes</h2>
         <i class="uil uil-times themes_close" id="themes-close"></i>
       </div>
 
@@ -66,7 +66,7 @@
             </a>
           </li>
         </ul>
-        <h1 class="nav_title menu_title">Menu</h1>
+        <h2 class="nav_title menu_title">Menu</h2>
         <i class="uil uil-times nav_close" id="nav-close"></i>
       </div>
 
@@ -84,9 +84,15 @@
     </nav>
   </header>
 
-  <!---------------- MAIN ---------------->
+  <!--         MAIN         -->
   <main class="main load-hidden">
-    <!---------------- HOME ---------------->
+    <!--div class="background">
+      <image class="background-elements" src="assets/img/star.png" alt="star"></image>
+      <image class="background-elements" src="assets/img/star.png" alt="star"></image>
+      <image class="background-elements" src="assets/img/star.png" alt="star"></image>
+      <image class="background-elements" src="assets/img/star.png" alt="star"></image>
+    </div-->
+    <!--       HOME         -->
     <section class="home section" id="home">
       <div class="home_container container grid">
         <div class="home_content grid">
@@ -116,22 +122,51 @@
           </div>
 
           <div class="home_img">
-            <svg class="home_blob" viewBox="0 0 261 297" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-              <mask id="mask0" mask-type="alpha">
-                <path
-                  d="M260.035 0.415504L57.306 29.806C53.1026 30.4154 49.7427 33.6136 48.9269 37.7818L0.582501 284.787C-0.704427 291.363 4.71234 297.319 11.3799 296.66L174.068 280.579C178.526 280.139 182.147 276.787 182.93 272.376L227.351 22.0986C227.621 20.576 226.786 19.0728 225.35 18.4985C224.811 18.283 224.225 18.2151 223.651 18.3017L140.689 30.8233L260.035 0.415504Z" />
-              </mask>
-              <g mask="url(#mask0)">
-                <path
-                  d="M260.035 0.415504L57.306 29.806C53.1026 30.4154 49.7427 33.6136 48.9269 37.7818L0.582501 284.787C-0.704427 291.363 4.71234 297.319 11.3799 296.66L174.068 280.579C178.526 280.139 182.147 276.787 182.93 272.376L227.351 22.0986C227.621 20.576 226.786 19.0728 225.35 18.4985C224.811 18.283 224.225 18.2151 223.651 18.3017L140.689 30.8233L260.035 0.415504Z" />
-                <image class="home_blob-img" x="0" y="0" href="./assets/img/home_blob-img-transparent.webp" />
-              </g>
-            </svg>
+            <div class="home_blob">
+              <svg class="home_blob_background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 271 305" fill="none">
+                <defs>
+                  <clipPath id="clipMask">
+                    <path
+                      d="M270.218 0.470286L60.7194 29.5042C56.5123 30.0873 53.1325 33.2643 52.2906 37.4274L0.707004 292.501C-0.621063 299.068 4.75831 305.058 11.4299 304.44L179.981 288.845C184.443 288.433 188.085 285.103 188.895 280.697L236.369 22.6225C236.657 21.0539 235.805 19.4982 234.328 18.8966C233.774 18.6708 233.169 18.597 232.577 18.6826L146.932 31.0613L270.218 0.470286Z" />
+                  </clipPath>
+                </defs>
+                <foreignObject clip-path="url(#clipMask)" x="-1px" y="-1px" width="100%" height="100%"
+                  transform="scale(1.01)">
+                  <div class="home_blob_background_animate_border"></div>
+                </foreignObject>
+              </svg>
+              <svg class="home_blob_background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 271 305" fill="none"
+                filter="blur(80px)">
+                <defs>
+                  <clipPath id="clipMask">
+                    <path
+                      d="M270.218 0.470286L60.7194 29.5042C56.5123 30.0873 53.1325 33.2643 52.2906 37.4274L0.707004 292.501C-0.621063 299.068 4.75831 305.058 11.4299 304.44L179.981 288.845C184.443 288.433 188.085 285.103 188.895 280.697L236.369 22.6225C236.657 21.0539 235.805 19.4982 234.328 18.8966C233.774 18.6708 233.169 18.597 232.577 18.6826L146.932 31.0613L270.218 0.470286Z" />
+                  </clipPath>
+                </defs>
+                <foreignObject clip-path="url(#clipMask)" x="-5%" y="-30%" width="100%" height="100%"
+                  transform="scale(1.5)">
+                  <div class="home_blob_background_animate_border"></div>
+                </foreignObject>
+              </svg>
+              <svg class="home_blob_container " viewBox="0 0 261 297" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <mask id="mask0" mask-type="alpha">
+                  <path
+                    d="M260.035 0.415504L57.306 29.806C53.1026 30.4154 49.7427 33.6136 48.9269 37.7818L0.582501 284.787C-0.704427 291.363 4.71234 297.319 11.3799 296.66L174.068 280.579C178.526 280.139 182.147 276.787 182.93 272.376L227.351 22.0986C227.621 20.576 226.786 19.0728 225.35 18.4985C224.811 18.283 224.225 18.2151 223.651 18.3017L140.689 30.8233L260.035 0.415504Z" />
+                </mask>
+                <g mask="url(#mask0)">
+                  <path
+                    d="M260.035 0.415504L57.306 29.806C53.1026 30.4154 49.7427 33.6136 48.9269 37.7818L0.582501 284.787C-0.704427 291.363 4.71234 297.319 11.3799 296.66L174.068 280.579C178.526 280.139 182.147 276.787 182.93 272.376L227.351 22.0986C227.621 20.576 226.786 19.0728 225.35 18.4985C224.811 18.283 224.225 18.2151 223.651 18.3017L140.689 30.8233L260.035 0.415504Z" />
+                  <image class="home_blob-img" x="0" y="0" height="100%" width="100%"
+                    href="./assets/img/home_blob-img-transparent.webp" />
+                </g>
+              </svg>
+
+            </div>
           </div>
 
           <div class="home_data">
-            <h1 class="home_title gradient-text">&lt;Hello World/&gt;</h1>
+            <h2 class="home_title gradient-text">&lt;Hello World/&gt;</h2>
             <h2 class="home_subtitle">
               I'm
               <span class="hi-gradient" style="color: white">
@@ -168,7 +203,7 @@
       <span class="section_subtitle">MY INTRODUCTION</span>
 
       <div class="about_container container grid">
-        <img src="assets/img/dev-working_rounded.gif" alt="" class="about_img" />
+        <img src="assets/img/dev-working_rounded.gif" alt="" class="about_img">
 
         <div class="about_data">
           <p class="about_description">
@@ -199,7 +234,7 @@
             <i class="uil uil-brackets-curly skills_icon"></i>
 
             <div>
-              <h1 class="skills_title">Languages</h1>
+              <h2 class="skills_title">Languages</h2>
             </div>
 
             <i class="uil uil-angle-down skills_arrow"></i>
@@ -210,35 +245,35 @@
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="">
                   Dart
                 </h3>
               </div>
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">
                   Java
                 </h3>
               </div>
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">
                   Python
                 </h3>
               </div>
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">
                   HTML
                 </h3>
               </div>
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">
 
                   CSS
                 </h3>
@@ -246,7 +281,7 @@
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">
 
                   Javascript
                 </h3>
@@ -254,7 +289,7 @@
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="">
                   Cpp
                 </h3>
               </div>
@@ -266,7 +301,7 @@
           <div class="skills_header">
             <i class="uil uil-vertical-align-bottom skills_icon"></i>
             <div>
-              <h1 class="skills_title">Libraries, Frameworks & etc</h1>
+              <h2 class="skills_title">Libraries, Frameworks & etc</h2>
             </div>
 
             <i class="uil uil-angle-down skills_arrow"></i>
@@ -277,7 +312,7 @@
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="">
                   Flutter
                 </h3>
               </div>
@@ -287,7 +322,7 @@
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="">
                   NodeJs
                 </h3>
               </div>
@@ -299,7 +334,7 @@
           <div class="skills_header">
             <i class="uil uil-database skills_icon"></i>
             <div>
-              <h1 class="skills_title">Databases</h1>
+              <h2 class="skills_title">Databases</h2>
             </div>
 
             <i class="uil uil-angle-down skills_arrow"></i>
@@ -310,14 +345,14 @@
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="">
                   Firebase
                 </h3>
               </div>
               <div class="skills_titles">
                 <h3 class="skills_name">
                   <img class="skill_name_icons"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="">
                   SQLite
                 </h3>
               </div>
@@ -329,14 +364,39 @@
           <div class="skills_header">
             <i class="uil uil-wrench skills_icon"></i>
             <div>
-              <h1 class="skills_title">Graphics & Other Tools</h1>
+              <h2 class="skills_title">Graphics & Other Tools</h2>
             </div>
 
             <i class="uil uil-angle-down skills_arrow"></i>
           </div>
 
-          <p style="text-align: center">🚧 Under Construction!</p>
-          <!--*TODO redo services-->
+          <div class="skills_list grid">
+            <div class="skills_data">
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="">
+                  Git/Github
+                </h3>
+              </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="">
+                  Figma
+                </h3>
+              </div>
+              <div class="skills_titles">
+                <h3 class="skills_name">
+                  <img class="skill_name_icons"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="">
+                  Photoshop
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--         Projects         -->
@@ -444,7 +504,7 @@
         All company, product and service names used in this website are for identification purposes only. Use of these
         names, trademarks and brands does not imply endorsement or affiliation.</p>
       <p class="footer_copyright">&#169; Somnath Paul. All rights reserved</p>
-      <p class="footer_credit">Made with ❤️ by <a href="https://somnathpaul.in">Somnath Paul</a> <br> Customized by Somnath Paul</p>
+      <p class="footer_credit">Made with ❤️ by <a href="https://somnathpaul.in">Somnath Paul</a> </p>
     </div>
   </footer>
 
