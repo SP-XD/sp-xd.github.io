@@ -5,7 +5,7 @@ const reveal = {
   easing: "ease-in",
   duration: 500,
   delay: 300,
-  origin: 'top',
+  origin: "top",
 };
 ScrollReveal().reveal(".main", reveal);
 
@@ -103,12 +103,12 @@ modalCloses.forEach((modelClose) => {
 
 /*-------------------------PROJECTS-------------------- */
 await fetch("./assets/json/projects.json")
-    .then(response=>{ 
+  .then((response) => {
     return response.json();
-    })
-    .then(projectsData => {  
-      console.log(projectsData);
-      document.getElementById("project-cards").innerHTML = `
+  })
+  .then((projectsData) => {
+    console.log(projectsData);
+    document.getElementById("project-cards").innerHTML = `
          ${projectsData
            .map(function (project) {
              return `
@@ -132,7 +132,7 @@ await fetch("./assets/json/projects.json")
            })
            .join("")} 
       `;
-    });
+  });
 
 /*-------------------- PROJECTS SWIPER  ----------------*/
 var swiper = new Swiper(".projects_content", {
@@ -181,21 +181,21 @@ function readingTime(text) {
 }
 
 // Fetch function
-async function gql(query, variables={}) {
-    const data = await fetch('https://api.hashnode.com/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            query,
-            variables
-        })
-    });
+async function gql(query, variables = {}) {
+  const data = await fetch("https://api.hashnode.com/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+      variables,
+    }),
+  });
 
-    return data.json();
+  return data.json();
 }
-// Query 
+// Query
 const GET_USER_ARTICLES = `
     query GetUserArticles($page: Int!) {
         user(username: "sp-xd") {
@@ -213,70 +213,71 @@ const GET_USER_ARTICLES = `
     }
 `;
 // making the call and injecting the articles
-gql(GET_USER_ARTICLES, { page: 0 })
-    .then(result => {
-        const articles = result.data.user.publication.posts;
-        let container = document.createElement('div');
-        container.classList.add('blog_items');
+gql(GET_USER_ARTICLES, { page: 0 }).then((result) => {
+  const articles = result.data.user.publication.posts;
+  let container = document.createElement("div");
+  container.classList.add("blog_items");
 
-        articles.forEach(article => {
-            let blog_item = document.createElement('div');
-            blog_item.classList.add('blog_item', 'card');
+  articles.forEach((article) => {
+    let blog_item = document.createElement("div");
+    blog_item.classList.add("blog_item", "card");
 
-            let blog_content =document.createElement('div');
-            blog_content.classList.add('blog_content');
+    let blog_content = document.createElement("div");
+    blog_content.classList.add("blog_content");
 
-            let article_link = `https://blogs.somnathpaul.in/${article.slug}`;
+    let article_link = `https://blogs.somnathpaul.in/${article.slug}`;
 
-            let title = document.createElement('h3');
-            title.classList.add('blog_title');
-            let title_link = document.createElement('a');
-            title_link.target='_blank';
-            title_link.href=article_link;
-            title_link.innerText = article.title;
-            title.appendChild(title_link);
+    let title = document.createElement("h3");
+    title.classList.add("blog_title");
+    let title_link = document.createElement("a");
+    title_link.target = "_blank";
+    title_link.href = article_link;
+    title_link.innerText = article.title;
+    title.appendChild(title_link);
 
+    let brief = document.createElement("p");
+    brief.classList.add("blog_brief");
+    brief.innerText = article.brief;
 
-            let brief = document.createElement('p');
-            brief.classList.add('blog_brief');
-            brief.innerText = article.brief;
+    let read_more_link = document.createElement("a");
+    read_more_link.target = "_blank";
+    read_more_link.href = article_link;
+    read_more_link.classList.add("read_more_button"); //, 'button', 'button-flex');
+    read_more_link.innerHTML = `Read more <i class="uil uil-external-link-alt"></i>`;
 
-            let read_more_link = document.createElement('a');
-            read_more_link.target = '_blank';
-            read_more_link.href = article_link; 
-            read_more_link.classList.add('read_more_button');//, 'button', 'button-flex');
-            read_more_link.innerHTML = `Read more <i class="uil uil-external-link-alt"></i>`;
+    let date = new Date(Date.parse(article.dateAdded));
+    let options = { day: "numeric", month: "long", year: "numeric" };
+    let date_added = document.createElement("span");
+    date_added.innerHTML = `<i class="uil uil-calender"></i> ${date.toLocaleString(
+      "en-US",
+      options
+    )} `;
 
-            let date = new Date(Date.parse(article.dateAdded));
-            let options = { day: 'numeric', month: 'long', year: 'numeric'};
-            let date_added=document.createElement('span');
-            date_added.innerHTML=`<i class="uil uil-calender"></i> ${date.toLocaleString('en-US', options)} `;
-            
-            let reading_time= document.createElement('span');
-            reading_time.innerHTML = `&nbsp <i class="uil uil-book-open"></i> ${readingTime(article.contentMarkdown)} min read`;
+    let reading_time = document.createElement("span");
+    reading_time.innerHTML = `&nbsp <i class="uil uil-book-open"></i> ${readingTime(
+      article.contentMarkdown
+    )} min read`;
 
+    let meta_data = document.createElement("span");
+    meta_data.appendChild(date_added);
+    meta_data.appendChild(reading_time);
 
-            let meta_data=document.createElement('span');
-            meta_data.appendChild(date_added);
-            meta_data.appendChild(reading_time);
+    let coverImage = document.createElement("img");
+    coverImage.src = article.coverImage;
+    coverImage.classList.add("blog_img");
 
-            let coverImage = document.createElement('img');
-            coverImage.src=article.coverImage;
-            coverImage.classList.add('blog_img');
+    brief.appendChild(read_more_link);
+    blog_item.appendChild(coverImage);
+    blog_content.appendChild(title);
+    // blog_item.appendChild(link);
+    blog_content.appendChild(meta_data);
+    blog_content.appendChild(brief);
+    blog_item.appendChild(blog_content);
+    container.appendChild(blog_item);
+  });
 
-            brief.appendChild(read_more_link);
-            blog_item.appendChild(coverImage);
-            blog_content.appendChild(title);
-            // blog_item.appendChild(link);
-            blog_content.appendChild(meta_data);
-            blog_content.appendChild(brief);
-            blog_item.appendChild(blog_content);
-            container.appendChild(blog_item);
-        })
-
-        document.querySelector('.blogs_container').appendChild(container);
+  document.querySelector(".blogs_container").appendChild(container);
 });
-
 
 /*---------------- SCROLL SECTIONS ACTIVE LINK ----------------*/
 const sections = document.querySelectorAll("section[id]");
@@ -357,11 +358,13 @@ darkLightThemeButton.addEventListener("click", () => {
 /*------------------- Color Themes --------------------- */
 const gradientThemesButtons = document.querySelectorAll(".theme_item");
 
-const selectedGradientThemeIndexNumber=localStorage.getItem("selectedGradientThemeIndexNumber");
+const selectedGradientThemeIndexNumber = localStorage.getItem(
+  "selectedGradientThemeIndexNumber"
+);
 
-if(selectedGradientThemeIndexNumber){
-  gradientThemesButtons.forEach((el, id)=>{
-    if(selectedGradientThemeIndexNumber==id){
+if (selectedGradientThemeIndexNumber) {
+  gradientThemesButtons.forEach((el, id) => {
+    if (selectedGradientThemeIndexNumber == id) {
       toggleColorTheme(el, id);
     }
   });
@@ -369,21 +372,21 @@ if(selectedGradientThemeIndexNumber){
 
 function toggleColorTheme(element, indexNumber) {
   let itemId = element.id;
-  
+
   for (let i = 0; i < gradientThemesButtons.length; i++) {
     gradientThemesButtons[i].classList.remove("theme-selected");
-    document.body.classList.remove("gradient-theme-"+(i+1));
+    document.body.classList.remove("gradient-theme-" + (i + 1));
   }
 
   document.body.classList.add(itemId);
   element.classList.add("theme-selected");
 
   //storing current gradient theme to local storage
-  localStorage.setItem('selectedGradientThemeIndexNumber', indexNumber);
+  localStorage.setItem("selectedGradientThemeIndexNumber", indexNumber);
 }
 
 gradientThemesButtons.forEach((el, id) => {
-  el.addEventListener("click", ()=>{
+  el.addEventListener("click", () => {
     toggleColorTheme(el, id);
   });
 });
