@@ -161,7 +161,7 @@ function readingTime(text) {
 
 // Fetch function
 async function gql(query, variables = {}) {
-  const data = await fetch("https://api.hashnode.com/", {
+  const data = await fetch("https://gql.hashnode.com/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -174,30 +174,57 @@ async function gql(query, variables = {}) {
 
   return data.json();
 }
+
+//old query  query GetUserArticles($page: Int!) {
+//     user(username: "sp-xd") {
+//         publication {
+//             posts(page: $page) {
+//                 title
+//                 brief
+//                 slug
+//                 coverImage
+//                 dateAdded
+//                 contentMarkdown
+//             }
+//         }
+//     }
+// }
+
 // Query
 const GET_USER_ARTICLES = `
-    query GetUserArticles($page: Int!) {
-        user(username: "sp-xd") {
-            publication {
-                posts(page: $page) {
+    query GetUserArticles($numOfPosts: Int!) {
+      user(username: "sp-xd") {
+        publications(first: 1) {
+          edges {
+            node {
+              posts(first: $numOfPosts) {
+                edges {
+                  node {
                     title
                     brief
                     slug
-                    coverImage
-                    dateAdded
-                    contentMarkdown
+                    coverImage {
+                      url
+                    }
+    								publishedAt
+                    readTimeInMinutes
+                  }
                 }
+              }
             }
+          }
         }
-    }
+      }
+}
 `;
 // making the call and injecting the articles
-gql(GET_USER_ARTICLES, { page: 0 }).then((result) => {
-  const articles = result.data.user.publication.posts;
+gql(GET_USER_ARTICLES, { numOfPosts: 0 }).then((result) => {
+  const articles = result.data.user.publications.edges[0].node.posts.edges;
   let container = document.createElement("div");
   container.classList.add("blog_items");
 
   articles.forEach((article) => {
+    article = article.node;
     let blog_item = document.createElement("div");
     blog_item.classList.add("blog_item", "card");
 
@@ -224,7 +251,7 @@ gql(GET_USER_ARTICLES, { page: 0 }).then((result) => {
     read_more_link.classList.add("read_more_button"); //, 'button', 'button-flex');
     read_more_link.innerHTML = `Read more <i class="uil uil-external-link-alt"></i>`;
 
-    let date = new Date(Date.parse(article.dateAdded));
+    let date = new Date(Date.parse(article.publishedAt));
     let options = { day: "numeric", month: "long", year: "numeric" };
     let date_added = document.createElement("span");
     date_added.innerHTML = `<i class="uil uil-calender"></i> ${date.toLocaleString(
@@ -233,16 +260,14 @@ gql(GET_USER_ARTICLES, { page: 0 }).then((result) => {
     )} `;
 
     let reading_time = document.createElement("span");
-    reading_time.innerHTML = `&nbsp <i class="uil uil-book-open"></i> ${readingTime(
-      article.contentMarkdown
-    )} min read`;
+    reading_time.innerHTML = `&nbsp <i class="uil uil-book-open"></i> ${article.readTimeInMinutes} min read`;
 
     let meta_data = document.createElement("span");
     meta_data.appendChild(date_added);
     meta_data.appendChild(reading_time);
 
     let coverImage = document.createElement("img");
-    coverImage.src = article.coverImage;
+    coverImage.src = article.coverImage.url;
     coverImage.classList.add("blog_img");
 
     brief.appendChild(read_more_link);
