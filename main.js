@@ -218,7 +218,7 @@ const GET_USER_ARTICLES = `
 }
 `;
 // making the call and injecting the articles
-gql(GET_USER_ARTICLES, { numOfPosts: 0 }).then((result) => {
+gql(GET_USER_ARTICLES, { numOfPosts: 6 }).then((result) => {
   const articles = result.data.user.publications.edges[0].node.posts.edges;
   let container = document.createElement("div");
   container.classList.add("blog_items");
